@@ -1,0 +1,227 @@
+n=10000;
+% generate_learn('Audio','audio',n);
+% generate_learn('CIFAR','cifar10',n);
+% generate_learn('Enron','enron',n);
+% generate_learn('GIST1M/gist','gist',n);
+% generate_learn('Glove','glove',n);
+% generate_learn('MNIST','MNIST',n);
+% generate_learn('SUN397','sun',n);
+% generate_learn('SIFT1M/sift','sift',n);
+% generate_learn('Trevi','trevi',n);
+% generate_learn('Notre','notre',n);
+% generate_learn('UKbench','ukbench',n);
+% generate_learn('MillionSong','millionSong',n);
+% generate_learn('ImageNet','imageNet',n);
+% generate_learn('NUS_WIDE','nuswide',n);
+% generate_learn('UQ_Video/lbp','uqvideo_lbp',n);
+% generate_learn('Youtube_Faces','youtube',n);
+% generate_learn('Deep1M','deep',n);
+
+% 
+% generate_learn('Ran_Data512','ran512',n);
+% generate_learn('Gauss5','gauss5',n);
+% generate_learn('Gauss1','gauss1',n);
+% generate_learn('Gauss1_100','gauss1_100',n);
+
+% generate_learn('SIFT1B','bigann0.25M',n);
+% generate_learn('SIFT1B','bigann0.5M',n);
+% generate_learn('SIFT1B','bigann1M',n);
+% generate_learn('SIFT1B','bigann2M',n);
+% generate_learn('SIFT1B','bigann4M',n);
+% generate_learn('SIFT1B','bigann6M',n);
+% generate_learn('SIFT1B','bigann8M',n);
+% generate_learn('SIFT1B','bigann10M',n);
+% generate_learn('SIFT1B','bigann16M',n);
+% generate_learn('SIFT1B','bigann32M',n);
+% 
+
+% 
+% generate_learn('RDIM','ran10',n);
+% generate_learn('RDIM','ran50',n);
+% generate_learn('RDIM','ran100',n);
+% generate_learn('RDIM','ran200',n);
+% generate_learn('RDIM','ran400',n);
+% generate_learn('RDIM','ran800',n);
+% generate_learn('RDIM','ran1000',n);
+
+
+
+% generate_learn('GVAR','gauss5_1',n);
+% generate_learn('GVAR','gauss5_5',n);
+% generate_learn('GVAR','gauss5_20',n);
+% generate_learn('GVAR','gauss5_100',n);
+
+
+
+% generate_learn('Glove300','glove300',n);
+% generate_learn('MillionSong420','millionSong420',n);
+
+for i= [9] %[10,14]  %,8,10]
+%     coarse_vocabularies('Deep1M','deep',i,n);
+    coarse_vocabularies('Audio','audio',i,n);     
+%     coarse_vocabularies('CIFAR','cifar10',i,n);
+%     coarse_vocabularies('Enron','enron',i,n);
+%     coarse_vocabularies('GIST1M/gist','gist',i,n);
+%     coarse_vocabularies('Glove','glove',i,n);
+% 
+%     coarse_vocabularies('MillionSong','millionSong',i,n); 
+%     coarse_vocabularies('MNIST','MNIST',i,n); 
+%     coarse_vocabularies('SUN397','sun',i,n);
+%     coarse_vocabularies('SIFT1M/sift','sift',i,n);
+%     coarse_vocabularies('Trevi','trevi',i,n);
+%     coarse_vocabularies('Notre','notre',i,n);
+%     coarse_vocabularies('UKbench','ukbench',i,n);
+%     
+%     coarse_vocabularies('Youtube_Faces','youtube',i,n);
+%     coarse_vocabularies('ImageNet','imageNet',i,n);
+%     coarse_vocabularies('UQ_Video/lbp','uqvideo_lbp',i,n);
+%     coarse_vocabularies('NUS_WIDE','nuswide',i,n);
+%     
+%     coarse_vocabularies('Ran_Data512','ran512',i,n);
+%     coarse_vocabularies('Gauss5','gauss5',i,n);
+%     coarse_vocabularies('Gauss1','gauss1',i,n);
+%     coarse_vocabularies('Gauss1_100','gauss1_100',i,n);
+
+
+%     coarse_vocabularies('SIFT1B','bigann0.25M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann0.5M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann1M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann2M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann4M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann6M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann8M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann10M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann16M',i,n);
+%     coarse_vocabularies('SIFT1B','bigann32M',i,n);
+
+
+
+%     coarse_vocabularies('RDIM','ran10',i,n);
+%     coarse_vocabularies('RDIM','ran50',i,n);
+%     coarse_vocabularies('RDIM','ran100',i,n);
+%     coarse_vocabularies('RDIM','ran200',i,n); 
+%     coarse_vocabularies('RDIM','ran400',i,n);
+%     coarse_vocabularies('RDIM','ran800',i,n);
+%     coarse_vocabularies('RDIM','ran1000',i,n);   
+
+%     coarse_vocabularies('GVAR','gauss5_1',i,n);
+%     coarse_vocabularies('GVAR','gauss5_5',i,n);
+%     coarse_vocabularies('GVAR','gauss5_20',i,n);
+%     coarse_vocabularies('GVAR','gauss5_100',i,n);
+
+
+%     coarse_vocabularies('Glove300','glove300',i,n);
+%     coarse_vocabularies('MillionSong420','millionSong420',i,n);
+
+    j=8;
+%     fine_vocabularies('Deep1M','deep',i,j,n);
+    fine_vocabularies('Audio','audio',i,j,n);     
+%     fine_vocabularies('CIFAR','cifar10',i,j,n);
+%     fine_vocabularies('Enron','enron',i,j,n);
+%     fine_vocabularies('GIST1M/gist','gist',i,j,n);
+%     fine_vocabularies('Glove','glove',i,j,n);
+% 
+%     fine_vocabularies('MillionSong','millionSong',i,j,n); 
+%     fine_vocabularies('MNIST','MNIST',i,j,n); 
+%     fine_vocabularies('SUN397','sun',i,j,n);
+%     fine_vocabularies('Trevi','trevi',i,j,n);
+%     fine_vocabularies('Youtube_Faces','youtube',i,j,n);
+%     
+%     fine_vocabularies('SIFT1M/sift','sift',i,j,n); 
+%     fine_vocabularies('Notre','notcd bi   re',i,j,n); 
+%     fine_vocabularies('UKbench','ukbench',i,j,n); 
+%     fine_vocabularies('ImageNet','imageNet',i,j,n); 
+%     fine_vocabularies('UQ_Video/lbp','uqvideo_lbp',i,j,n); 
+%     fine_vocabularies('NUS_WIDE','nuswide',i,j,n);
+    
+%     fine_vocabularies('Ran_Data512','ran512',i,j,n);
+%     fine_vocabularies('Gauss5','gauss5',i,j,n);
+%     fine_vocabularies('Gauss1','gauss1',i,j,n);
+%     fine_vocabularies('Gauss1_100','gauss1_100',i,j,n);
+
+
+%     fine_vocabularies('SIFT1B','bigann0.25M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann0.5M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann1M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann2M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann4M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann6M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann8M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann10M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann16M',i,j,n);
+%     fine_vocabularies('SIFT1B','bigann32M',i,j,n);
+
+% 
+%     fine_vocabularies('RDIM','ran10',i,j,n);
+%     fine_vocabularies('RDIM','ran50',i,j,n);
+%     fine_vocabularies('RDIM','ran100',i,j,n);
+%     fine_vocabularies('RDIM','ran200',i,j,n);
+%     fine_vocabularies('RDIM','ran400',i,j,n);
+%     fine_vocabularies('RDIM','ran800',i,j,n);
+%        fine_vocabularies('RDIM','ran1000',i,j,n); 
+
+%     fine_vocabularies('GVAR','gauss5_1',i,j,n);
+%     fine_vocabularies('GVAR','gauss5_5',i,j,n);
+%     fine_vocabularies('GVAR','gauss5_20',i,j,n);
+%     fine_vocabularies('GVAR','gauss5_100',i,j,n);
+
+%     fine_vocabularies('Glove300','glove300',i,j,n);
+%     fine_vocabularies('MillionSong420','millionSong420',i,j,n);
+      
+
+%     transform_base_query('Deep1M','deep',i);
+    transform_base_query('Audio','audio',i);     
+%     transform_base_query('CIFAR','cifar10',i);
+%     transform_base_query('Enron','enron',i);
+%     transform_base_query('GIST1M/gist','gist',i);
+%     transform_base_query('Glove','glove',i);
+%     transform_base_query('MillionSong','millionSong',i); 
+%     transform_base_query('MNIST','MNIST',i); 
+% 
+%     transform_base_query('SUN397','sun',i);
+%     transform_base_query('Trevi','trevi',i);
+%     transform_base_query('Youtube_Faces','youtube',i);
+%     transform_base_query('ImageNet','imageNet',i);
+%       transform_base_query('SIFT1M/sift','sift',i);
+%     transform_base_query('UQ_Video/lbp','uqvideo_lbp',i);
+%     transform_base_query('NUS_WIDE','nuswide',i);
+%     transform_base_query('Notre','notre',i);
+%     transform_base_query('UKbench','ukbench',i);
+
+%     transform_base_query('Ran_Data512','ran512',i);
+%     transform_base_query('Gauss5','gauss5',i);
+%     transform_base_query('Gauss1','gauss1',i);
+%     transform_base_query('Gauss1_100','gauss1_100',i);
+
+%     transform_base_query('SIFT1B','bigann0.25M',i);
+%     transform_base_query('SIFT1B','bigann0.5M',i);
+%     transform_base_query('SIFT1B','bigann1M',i);
+%     transform_base_query('SIFT1B','bigann2M',i);
+%     transform_base_query('SIFT1B','bigann4M',i);
+%     transform_base_query('SIFT1B','bigann6M',i);
+%     transform_base_query('SIFT1B','bigann8M',i);
+%     transform_base_query('SIFT1B','bigann10M',i);
+%     transform_base_query('SIFT1B','bigann16M',i);
+%     transform_base_query('SIFT1B','bigann32M',i);
+
+
+%     transform_base_query('RSIFT','sift',i);
+
+%     transform_base_query('RDIM','ran10',i);
+%     transform_base_query('RDIM','ran50',i);
+%     transform_base_query('RDIM','ran100',i);
+%     transform_base_query('RDIM','ran200',i);
+%     transform_base_query('RDIM','ran400',i);
+%     transform_base_query('RDIM','ran800',i);
+%     transform_base_query('RDIM','ran1000',i);
+
+% transform_base_query('GVAR','gauss5_1',i);
+% transform_base_query('GVAR','gauss5_5',i);
+% transform_base_query('GVAR','gauss5_20',i);
+% transform_base_query('GVAR','gauss5_100',i);
+
+
+%     transform_base_query('Glove300','glove300',i);
+%     transform_base_query('MillionSong420','millionSong420',i);
+%     
+end
