@@ -1,0 +1,159 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec4261866928/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4261866928.dir/build.make CMakeFiles/cmTryCompileExec4261866928.dir/build
+gmake[1]: Entering directory `/home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+/home/liwen/Downloads/cmake/bin/cmake -E cmake_progress_report /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4261866928.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4261866928.dir/CheckSymbolExists.c.o   -c /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4261866928
+/home/liwen/Downloads/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4261866928.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec4261866928.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4261866928 -rdynamic 
+CMakeFiles/cmTryCompileExec4261866928.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec4261866928] Error 1
+gmake[1]: Leaving directory `/home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec4261866928/fast] Error 2
+
+File /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3340845963/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3340845963.dir/build.make CMakeFiles/cmTryCompileExec3340845963.dir/build
+gmake[1]: Entering directory `/home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+/home/liwen/Downloads/cmake/bin/cmake -E cmake_progress_report /home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3340845963.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3340845963.dir/CheckFunctionExists.c.o   -c /home/liwen/Downloads/cmake/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3340845963
+/home/liwen/Downloads/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3340845963.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3340845963.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3340845963 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3340845963] Error 1
+gmake[1]: Leaving directory `/home/liwen/Documents/LSH/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3340845963/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2093624780/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2093624780.dir/build.make CMakeFiles/cmTryCompileExec2093624780.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2093624780.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2093624780.dir/CheckSymbolExists.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2093624780
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2093624780.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc      -L/home/yingz/projects/qingl/code/lib  CMakeFiles/cmTryCompileExec2093624780.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2093624780 -rdynamic 
+CMakeFiles/cmTryCompileExec2093624780.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec2093624780] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2093624780/fast] Error 2
+
+File /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3655865181/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3655865181.dir/build.make CMakeFiles/cmTryCompileExec3655865181.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3655865181.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3655865181.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3655865181
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3655865181.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -L/home/yingz/projects/qingl/code/lib  CMakeFiles/cmTryCompileExec3655865181.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3655865181 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3655865181] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NonMetricSpaceLib-master/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3655865181/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2325973168/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2325973168.dir/build.make CMakeFiles/cmTryCompileExec2325973168.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2325973168.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2325973168.dir/CheckSymbolExists.c.o   -c /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2325973168
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2325973168.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec2325973168.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2325973168 -rdynamic 
+CMakeFiles/cmTryCompileExec2325973168.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec2325973168] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2325973168/fast] Error 2
+
+File /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec4096962176/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4096962176.dir/build.make CMakeFiles/cmTryCompileExec4096962176.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4096962176.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4096962176.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4096962176
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4096962176.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec4096962176.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4096962176 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec4096962176] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/NonMetricSpaceLib/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec4096962176/fast] Error 2
+
+
