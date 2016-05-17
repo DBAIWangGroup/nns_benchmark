@@ -26,6 +26,11 @@ Currently, we evaluate 15 representative NNS algorithms on 20 datasets where det
 Below are brief introuductions of the algorithms evaluated in the benchmark, which are grouped into four categories.
 
 #### 1. LSH-BASED METHODS
+- **QALSH** Query-Aware LSH ([2],PVLDB’15). 
+  Originial source code: http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz
+
+- **SRS** ([3], PVLDB’14).
+Originial source code: https://github.com/DBWangGroupUNSW/SRS
 
 #### 2. ENCODING-BASED METHODS
 
@@ -47,4 +52,10 @@ In our experiment paper[1], we conduct comprehensive experimental study of state
 - We group algorithms into several categories, and then perform detailed analysis on both intra- and inter-category evaluations. Our data-based analyses provide confirmation of useful principles to solve the problem, the strength and weakness of some of the best methods, and some initial explanation and understanding of why some datasets are harder than others. The   experience and insights we gained throughout the study enable us to engineer a  new empirical algorithm, DPG, that  outperforms all the existing algorithms in majority of the settings and is the most robust in most aspects.
 
 [1] Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement [Full Version] http://www.cse.unsw.edu.au/~yingz/NNS.pdf
+[2] Q. Huang, J. Feng, Y. Zhang, Q. Fang, and W. Ng. Query-aware locality-sensitive hashing for approximate nearest neighbor search. PVLDB, 9(1):1–12, 2015.
+[3] Y. Sun, W. Wang, J. Qin, Y. Zhang, and X. Lin. SRS: solving c-approximate nearest neighbor queries in high
+dimensional euclidean space with a tiny index. PVLDB,8(1):1–12, 2014
+
+
+
 
