@@ -64,35 +64,38 @@ Note that, in our impementation, we use the [inverted multi-indexing technique](
 
 - **NAPP** Neighborhood APProximation index ([9], PVLDB’15). 
 [Originial source code](https://github.com/searchivarius/nmslib)
+  1. We disable the SIMD, multi-threading, and -Ofast compiler option.
 
 #### 3. TREE-BASED SPACE PARTITION METHODS
 
 - **FLANN** ([10], TPAMI’14). 
 [Originial source code](http://www.cs.ubc.ca/research/flann)
+  1.  We disable the multi-threading techniques in **FLANN**.
 
 - **Annoy** ([11]). 
 [Originial source code](https://github.com/spotify/annoy)
+  1. Source codes are implemented by C++ (core algorithms) and Python (for binding). We re-implemente the Python binding part with C++. 
+  2. We disable -ffast-math compiler option in **Annoy**.
 
 - **VP-Tree** Vantage-Point tree ([12], NIPS’13). 
 [Originial source code](https://github.com/searchivarius/nmslib)
+  1. We disable the SIMD, multi-threading, and -Ofast compiler option.
 
 #### 4. NEIGHBORHOOD-BASED METHODS
 
 - **SW** Small World Graph ([13], IS'14). 
 [Originial source code](https://github.com/searchivarius/nmslib)
+  1. We disable the SIMD, multi-threading, and -Ofast compiler option.
 
-- **RCT** Rank Cover Tree ([14], TPAMI'15)
+- **RCT** Rank Cover Tree ([14], TPAMI'15).
 Originial source code is obtained from authors by email, who kindly allow us to release them thorough this benchmark. 
 
 - **KGraph** ([15] [16], WWW'11). 
 [Originial source code](https://github.com/aaalgo/kgraph)
+  1. We disabled SIMD and multi-threading techniques in **KGraph**.
 
 - **DPG** Diversified Proximity Graph ([1]). 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark)
-
-### IMPLEMENTATION ISSUES 
-
-
 
 ## EXPERIMENT PAPER  
 
