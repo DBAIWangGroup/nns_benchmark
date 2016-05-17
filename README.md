@@ -27,21 +27,35 @@ Currently, we evaluate 15 representative NNS algorithms on 20 datasets where det
 Below are brief introuductions of the algorithms evaluated in the benchmark, which are grouped into four categories.
 
 #### 1. LSH-BASED METHODS
-- **QALSH** Query-Aware LSH ([2],PVLDB’15). 
-
+- **QALSH** Query-Aware LSH ([2], PVLDB’15). 
 [Originial source code](http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz)
 
 - **SRS** ([3], PVLDB’14).
-
 [Originial source code](https://github.com/DBWangGroupUNSW/SRS)
+
+Note that both external memory and in-memory versions of **SRS** are available.
 
 #### 2. ENCODING-BASED METHODS
 
-- **SGH** Scalable Graph Hashing ([4], IJCAI’15).
+- **SGH** Scalable Graph Hashing ([4], IJCAI’15). 
 [Originial source code](http://cs.nju.edu.cn/lwj)
 
-- **AGH** Anchor Graph Hashing ([5],ICML’11).
+- **AGH** Anchor Graph Hashing ([5], ICML’11). 
 [Originial source code](http://www.ee.columbia.edu/ln/dvmm/downloads)
+
+- **NSG** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
+[Originial source code](https://github.com/pyongjoo/nsh)
+
+- **SH** Selective Hashing ([7], KDD’15). 
+[Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). Note that we have confirmed with the author that the source code is KDD'15 paper, not the SIGMOD'14 paper.  
+
+- **OPQ** Optimal Product Quantization ([8], TPAMI’14). 
+[Originial source code](http://research.microsoft.com/en-us/um/people/kahe). 
+Note that, in our impementation, we use the [inverted multi-indexing technique](http://arbabenko.github.io/MultiIndex/index.html) [*] to perform
+non-exhaustive search for **OPQ**.
+
+- **NAPP** Neighborhood APProximation index ([9], PVLDB’15). 
+[Originial source code](https://github.com/searchivarius/nmslib)
 
 
 #### 3. TREE-BASED SPACE PARTITION METHODS
@@ -71,6 +85,18 @@ dimensional euclidean space with a tiny index*. PVLDB,8(1):1–12, 2014
 [4] Q. Jiang and W. Li. *Scalable graph hashing with feature transformation*. In IJCAI, pages 2248–2254, 2015.
 
 [5] W. Liu, J. Wang, S. Kumar, and S. Chang. *Hashing with graphs*. In ICML, pages 1–8, 2011.
+
+[6] Y. Park, M. J. Cafarella, and B. Mozafari. *Neighbor-sensitive hashing*. In PVLDB, 9(3):144–155, 2015.
+
+[7] J. Gao, H. V. Jagadish, B. C. Ooi, and S. Wang. *Selective hashing: Closing the gap between radius search and k-nn
+search*. In SIGKDD, 2015.
+
+[8] T. Ge, K. He, Q. Ke, and J. Sun. *Optimized product quantization*. IEEE Trans. Pattern Anal. Mach. Intell., 36(4):744–755, 2014.
+
+[9] B. Naidan, L. Boytsov, and E. Nyberg. *Permutation search methods are efficient, yet faster search is possible*. PVLDB,
+8(12):1618–1629, 2015.
+
+[*] A. Babenko and V. S. Lempitsky. *The inverted multi-index*. In CVPR, pages 3069–3076, 2012.
 
 
 
