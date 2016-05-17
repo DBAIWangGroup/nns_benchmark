@@ -108,8 +108,26 @@ the number of data points (n), dimensionality (d), Relative Contrast (RC [18]), 
 
 | **Name** | **n X 10^3** | **d** | **RC** | **LID** | **Type**|
 | ------ | ------ | ------ | ------ | ------ | -------- |
-| Nus* | 269 |  500  | 1.67 |  24.5 | Image |
-
+| Nus*   | 269    |  500    |  1.67 |  24.5 | Image |
+| Gist*  | 983    |  960    |  1.94   | 18.9  | Image |
+| Rand*  | 1,000  |  100    | 3.05    | 58.7  | Synthetic |
+| Glove* | 1,192  |  100    | 1.82    | 20.0  | Text  | 
+| Cifa   | 50     |  512    | 1.97    | 9.0   | Image |
+| Audio  | 53     |  192    | 2.97    | 5.6   | Audio |
+| Mnist  | 69     |  784    | 2.38    | 6.5   | Image |
+| Sun    | 79     |  512    | 1.94    | 9.9   | Image |
+| Enron  | 95     |  1,369  | 6.39    | 11.7  | Text  |
+| Trevi  | 100    |  4,096  | 2.95    | 9.2   | Image |
+| Notre  | 333    |  128    | 3.22    | 9.0   | Image |
+| Yout   | 346    |  1,770  | 2.29    | 12.6  | Video |
+| Msong  | 922    |  420    | 3.81    | 9.5   | Audio |
+| Sift   | 994    |  128    | 3.50    | 9.3   | Image |
+| Deep   | 1,000  |  128    | 1.96    | 12.1  | Image |
+| Ben    | 1,098  |  128    | 1.96    | 8.3   | Image |
+| Imag   | 2,340  |  150    | 2.54    | 11.6  | Image |
+| Gauss  | 2,000  |  512    | 3.36    | 19.6  | Synthetic   |
+| UQ-V   | 3,038  |  256    | 8.39    | 7.2   | Video |
+| BANN   | 10,000 |  128    | 2.60    | 10.3  | Image |
 
 
 
