@@ -24,27 +24,36 @@ Currently, we evaluate 15 representative NNS algorithms on 20 datasets where det
 
 ## ALGORITHMS EVALUTED 
 
-Below are brief introuductions of the algorithms evaluated in the benchmark, which are grouped into four categories.
+All the original source codes used in this benchmark are publicly available. Algorithms are implemented in C++ unless otherwise specified. We carefully go through all the implementations and make necessary modifications to for fair comparisons. For instance, we re-implement the search process of some algorithms in C++. We also disable the multi-threads, SIMD instructions, fast-math, and hardware prefetching technique. 
+
+Below are brief introuductions of the algorithms evaluated in the benchmark as well as our revisions,
+which are grouped into four categories.
 
 #### 1. LSH-BASED METHODS
 - **QALSH** Query-Aware LSH ([2], PVLDB’15). 
 [Originial source code](http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz)
 
 - **SRS** ([3], PVLDB’14).
-[Originial source code](https://github.com/DBWangGroupUNSW/SRS)
-
+[Originial source code](https://github.com/DBWangGroupUNSW/SRS). 
 Note that both external memory and in-memory versions of **SRS** are available.
 
 #### 2. ENCODING-BASED METHODS
 
 - **SGH** Scalable Graph Hashing ([4], IJCAI’15). 
-[Originial source code](http://cs.nju.edu.cn/lwj)
+[Originial source code](http://cs.nju.edu.cn/lwj). 
+- Source codes (index construction and search) are implemented by MATLAB. 
+- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 - **AGH** Anchor Graph Hashing ([5], ICML’11). 
 [Originial source code](http://www.ee.columbia.edu/ln/dvmm/downloads)
+- Source codes (index construction and search) are implemented by MATLAB. 
+- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
+
 
 - **NSG** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
 [Originial source code](https://github.com/pyongjoo/nsh)
+- Source codes (index construction and search) are implemented by MATLAB. 
+- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 - **SH** Selective Hashing ([7], KDD’15). 
 [Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). Note that we have confirmed with the author that the source code is KDD'15 paper, not the SIGMOD'14 paper.  
@@ -82,6 +91,8 @@ Originial source code is obtained from authors by email, who kindly allow us to 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark)
 
 ### IMPLEMENTATION ISSUES 
+
+
 
 ## EXPERIMENT PAPER  
 
