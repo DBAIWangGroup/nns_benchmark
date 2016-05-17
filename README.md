@@ -161,7 +161,7 @@ each as a 500-dimensional bag-of-words vector.
 - [**Imag**](http://cloudcv.org/objdetect) is introduced and employed by ``The ImageNet Large Scale Visual Recognition Challenge(ILSVRC)'', which contains about 2.4 million data points with 150 dimensions dense SIFT features.
 
 - [**Mnist**](http://yann.lecun.com/exdb/mnist) consists of 70k images of hand-written digits, each as a 784-d vector concatenating all pixels. we randomly sample 1k as the queries and use the remaining as the data base.
-- 
+ 
 - [**Sun**](http://groups.csail.mit.edu/vision/SUN) contains about 0.08 million 512-d GIST features of images.
 
 - [**Notre**](http://phototour.cs.washington.edu/datasets) contains about 0.3 million 128-d features of a set of Flickr images and a reconstruction.
@@ -173,9 +173,8 @@ each as a 500-dimensional bag-of-words vector.
 - [**UQ_V**]() is a video dataset. a local feature based on some keyframes are extracted which include 256 dimensions.
 
 - [**Yout**](http://www.cs.tau.ac.il/~wolf/ytfaces/index.html) contains 3,425 videos of 1,595 different people. All the videos were downloaded from YouTube. An average of 2.15 videos are available for each subject. The shortest clip duration is 48 frames, the longest clip is 6,070 frames, and the average length of a video clip is 181.3 frames.
-- 
 
-## EXPERIMENT PAPER  
+## PERFORMANCE EVALUATION and ANALYSES 
 
 In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
 
@@ -185,7 +184,6 @@ In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we cond
 - providing rule-of-the-thumb recommendations about how to select the method under different settings.
 
 - We group algorithms into several categories, and then perform detailed analysis on both intra- and inter-category evaluations. Our data-based analyses provide confirmation of useful principles to solve the problem, the strength and weakness of some of the best methods, and some initial explanation and understanding of why some datasets are harder than others. The experience and insights we gained throughout the study enable us to engineer a  new empirical algorithm, DPG, that outperforms all the existing algorithms in majority of the settings and is the most robust in most aspects.
-
  
 ## REFERENCES 
 
