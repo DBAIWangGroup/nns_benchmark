@@ -8,7 +8,7 @@ We believe such a NNS benchmark will be beneficial to both the scientific commun
 
 As the first step of the benchmark, we restrict the scope of the study by imposing the following constraints. 
 
-- **Representative and competitive NNS algorithms**. It has been well recognized that the exact NNS algorithms often cannot even outperform the simple linear scan algorithm when the dimensionality is high. We therefore only consider the approximate solutions. In this benchmark, we consider the state-of-the-art algorithms in several domains.
+- **Representative and competitive approximate NNS algorithms**. It has been well recognized that the exact NNS algorithms often cannot even outperform the simple linear scan algorithm when the dimensionality is high. We therefore only consider the approximate solutions. In this benchmark, we consider the state-of-the-art algorithms in several domains.
 
 - **No hardware specific optimizations**.  Not all the implementations we obtained or implemented have the same level of
 sophistication in utilizing the hardware specific features to speed up the query processing. Therefore, we modified several implementations so that no algorithm uses multiple threads, multiple CPUs, SIMD instructions, hardware pre-fetching, or GPUs.
@@ -97,6 +97,23 @@ Originial source code is obtained from authors by email, who kindly allow us to 
 - **DPG** Diversified Proximity Graph ([1]). 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark)
 
+
+## DATASETS USED 
+
+We deploy **18 real datasets** used by existing works which cover a wide range of applications including image, audio,
+vedio and textual data. We also use **2 sythetic datasets**. Table 1 summarizes the characteristics of the datasets including
+the number of data points, dimensionality, Relative Contrast (RC [18]), local intrinsic dimensionality (LID [19]), and data type where RC and LID are used to describe the hardness of the datasets.
+
+**Table 1**
+
+| **Name** | **n X 10^3** | **d** | **RC** | **LID** | **Type**|
+| --- | --- | --- | --- | --- | --- |
+
+
+
+
+
+
 ## EXPERIMENT PAPER  
 
 In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
@@ -147,6 +164,14 @@ Anal. Mach. Intell., 36(11):2227–2240, 2014.
 [16] W. Dong, M. Charikar, and K. Li. *Efficient k-nearest neighbor graph construction for generic similarity measures*. In WWW, 2011.
 
 [17] A. Babenko and V. S. Lempitsky. *The inverted multi-index*. In CVPR, pages 3069–3076, 2012.
+
+[18] J. He, S. Kumar, and S. Chang. *On the difficulty of nearest neighbor search*. In ICML, 2012.
+
+[19] L. Amsaleg, O. Chelly, T. Furon, S. Girard, M. E. Houle, K. Kawarabayashi, and M. Nett. *Estimating local intrinsic dimensionality*. In SIGKDD, 2015.
+
+
+
+
 
 
 
