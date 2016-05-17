@@ -21,14 +21,23 @@ sophistication in utilizing the hardware specific features to speed up the query
 
 Currently, we evaluate 15 representative NNS algorithms on 20 datasets where details are reported in [1] .
 
-Below are brief introuductions of the algorithms evaluated in the benchmark.
+## ALGORITHMS EVALUTED 
 
-### ALGORITHMS EVALUTED 
+Below are brief introuductions of the algorithms evaluated in the benchmark, which are grouped into four categories.
 
+#### 1. LSH-BASED METHODS
 
-### Experiment paper 
+#### 2. ENCODING-BASED METHODS
 
-We recommend our recent research paper[1], which conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
+#### 3. TREE-BASED SPACE PARTITION METHODS
+
+#### 4. NEIGHBORHOOD-BASED METHODS
+
+### IMPLEMENTATION ISSUES 
+
+## EXPERIMENT PAPER  
+
+In our experiment paper[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
 
 - comparing all the methods without adding any implementation tricks, which makes the comparison more fair; 
 - evaluating all the methods using multiple measures; and
