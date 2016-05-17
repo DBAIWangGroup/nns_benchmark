@@ -133,12 +133,12 @@ We mark the first four datasets in Table 1 with asterisks to indicate that they 
 others according to their RC and LID values.
 Below, we describe the datasets used in the experiments.
 
--[**Sift**](http://corpus-texmex.irisa.fr) consists of 1 million 128-d SIFT vectors.
+- [**Sift**](http://corpus-texmex.irisa.fr) consists of 1 million 128-d SIFT vectors.
 
--[**Nusw**](http://lms.comp.nus.edu.sg/research/NUS-WIDE.htm) includes around $2.7$ million web images,
+- [**Nusw**](http://lms.comp.nus.edu.sg/research/NUS-WIDE.htm) includes around $2.7$ million web images,
 each as a 500-dimensional bag-of-words vector.
 
--[**Msong**](http://www.ifs.tuwien.ac.at/mir/msd/download.html) is a collection of audio features and metadata for a million contemporary popular music tracks with $420$ dimensions.
+- [**Msong**](http://www.ifs.tuwien.ac.at/mir/msd/download.html) is a collection of audio features and metadata for a million contemporary popular music tracks with $420$ dimensions.
 
 - [**Gist**]() is is an image dataset which contains about 1 million data points with 960 dimensions.
 
@@ -154,7 +154,7 @@ each as a 500-dimensional bag-of-words vector.
 
 - [**Cifar**](http://www.cs.toronto.edu/~kriz/cifar.html) is a labeled subset of *TinyImage* dataset, which consists of 60000 32 X color images in 10 classes, with each image represented by a 512-d GIST feature vector.
 
-- [**Enron**] origins from a collection of emails. Yifang et. al. extract bi-grams and form feature vectors of 1369 dimensions. 
+- [**Enron**]() origins from a collection of emails. Yifang et. al. extract bi-grams and form feature vectors of 1369 dimensions. 
 
 - [**Glove**](http://nlp.stanford.edu/projects/glove) contains 1.2 million 100-d word feature vectors extracted from Tweets.
 
