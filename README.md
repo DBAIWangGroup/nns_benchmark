@@ -1,4 +1,4 @@
-# NNS_Benchmark for Nearest Neighbor Search on High Dimensional Data
+# NNS Benchmark for Nearest Neighbor Search on High Dimensional Data
 
 Nearest neighbor search (NNS) is fundamental and essential operation in applications from many domains, such as databases, machine learning, multimedia, and computer vision. Over hundreds of algorithms have been proposed to solve the problem
 from different perspectives, and this line of research remains very active in the above domains due to its importance and the huge challenges. 
@@ -100,9 +100,7 @@ Originial source code is obtained from authors by email, who kindly allow us to 
 
 ## DATASETS USED 
 
-We deploy **18 real datasets** used by existing works which cover a wide range of applications including image, audio,
-vedio and textual data. We also use **2 sythetic datasets**. Table 1 summarizes the characteristics of the datasets including
-the number of data points (n), dimensionality (d), Relative Contrast (RC [18]), local intrinsic dimensionality (LID [19]), and data type where RC and LID are used to describe the hardness of the datasets.
+We deploy **18 real datasets** used by existing works which cover a wide range of applications including image, audio, vedio and textual data. We also use **2 sythetic datasets**. Table 1 summarizes the characteristics of the datasets including the number of data points (n), dimensionality (d), Relative Contrast (RC [18]), local intrinsic dimensionality (LID [19]), and data type where RC and LID are used to describe the hardness of the datasets.
 
 | **Name** | **n X 10^3** | **d** | **RC** | **LID** | **Type**|
 | ------ | ------ | ------ | ------ | ------ | -------- |
