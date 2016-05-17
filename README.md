@@ -51,16 +51,35 @@ Note that both external memory and in-memory versions of **SRS** are available.
 
 - **OPQ** Optimal Product Quantization ([8], TPAMI’14). 
 [Originial source code](http://research.microsoft.com/en-us/um/people/kahe). 
-Note that, in our impementation, we use the [inverted multi-indexing technique](http://arbabenko.github.io/MultiIndex/index.html) [*] to perform
-non-exhaustive search for **OPQ**.
+Note that, in our impementation, we use the [inverted multi-indexing technique](http://arbabenko.github.io/MultiIndex/index.html) [17] to perform non-exhaustive search for **OPQ**.
 
 - **NAPP** Neighborhood APProximation index ([9], PVLDB’15). 
 [Originial source code](https://github.com/searchivarius/nmslib)
 
-
 #### 3. TREE-BASED SPACE PARTITION METHODS
 
+- **FLANN** ([10], TPAMI’14). 
+[Originial source code](http://www.cs.ubc.ca/research/flann)
+
+- **Annoy** ([11]). 
+[Originial source code](https://github.com/spotify/annoy)
+
+- **VP-Tree** Vantage-Point tree ([12], NIPS’13). 
+[Originial source code](https://github.com/searchivarius/nmslib)
+
 #### 4. NEIGHBORHOOD-BASED METHODS
+
+- **SW** Small World Graph ([13], IS'14). 
+[Originial source code](https://github.com/searchivarius/nmslib)
+
+- **RCT** Rank Cover Tree ([14], TPAMI'15)
+Originial source code is obtained from authors by email, who kindly allow us to release them thorough this benchmark. 
+
+- **KGraph** ([15] [16], WWW'11). 
+[Originial source code](https://github.com/aaalgo/kgraph)
+
+- **DPG** Diversified Proximity Graph ([1]). 
+[Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark)
 
 ### IMPLEMENTATION ISSUES 
 
@@ -73,7 +92,10 @@ In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we cond
 - providing a deeper understanding of the state-of-the-art with new insights into the strength and weakness of each method. We also provide some suggestions about how to select the method under different settings.
 - providing rule-of-the-thumb recommendations about how to select the method under different settings.
 
-- We group algorithms into several categories, and then perform detailed analysis on both intra- and inter-category evaluations. Our data-based analyses provide confirmation of useful principles to solve the problem, the strength and weakness of some of the best methods, and some initial explanation and understanding of why some datasets are harder than others. The   experience and insights we gained throughout the study enable us to engineer a  new empirical algorithm, DPG, that  outperforms all the existing algorithms in majority of the settings and is the most robust in most aspects.
+- We group algorithms into several categories, and then perform detailed analysis on both intra- and inter-category evaluations. Our data-based analyses provide confirmation of useful principles to solve the problem, the strength and weakness of some of the best methods, and some initial explanation and understanding of why some datasets are harder than others. The experience and insights we gained throughout the study enable us to engineer a  new empirical algorithm, DPG, that outperforms all the existing algorithms in majority of the settings and is the most robust in most aspects.
+
+ 
+## REFERENCES 
 
 [1] W. Li, Y. Zhang, Y. Sun, W. Wang, W. Zhang, X. Lin, *Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement*. [Full Version](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)
 
@@ -88,15 +110,30 @@ dimensional euclidean space with a tiny index*. PVLDB,8(1):1–12, 2014
 
 [6] Y. Park, M. J. Cafarella, and B. Mozafari. *Neighbor-sensitive hashing*. In PVLDB, 9(3):144–155, 2015.
 
-[7] J. Gao, H. V. Jagadish, B. C. Ooi, and S. Wang. *Selective hashing: Closing the gap between radius search and k-nn
-search*. In SIGKDD, 2015.
+[7] J. Gao, H. V. Jagadish, B. C. Ooi, and S. Wang. *Selective hashing: Closing the gap between radius search and k-nn search*. In SIGKDD, 2015.
 
 [8] T. Ge, K. He, Q. Ke, and J. Sun. *Optimized product quantization*. IEEE Trans. Pattern Anal. Mach. Intell., 36(4):744–755, 2014.
 
 [9] B. Naidan, L. Boytsov, and E. Nyberg. *Permutation search methods are efficient, yet faster search is possible*. PVLDB,
 8(12):1618–1629, 2015.
 
-[*] A. Babenko and V. S. Lempitsky. *The inverted multi-index*. In CVPR, pages 3069–3076, 2012.
+[10] M. Muja and D. G. Lowe. *Scalable nearest neighbor algorithms for high dimensional data*. IEEE Trans. Pattern
+Anal. Mach. Intell., 36(11):2227–2240, 2014.
+
+[11] E. Bernhardsson. [*Annoy at github*](https://github.com/spotify/annoy).
+
+[12] L. Boytsov and B. Naidan. *Learning to prune in metric and non-metric spaces*. In NIPS, 2013.
+
+[13] Y. Malkov, A. Ponomarenko, A. Logvinov, and V. Krylov. *Approximate nearest neighbor algorithm based on navigable small world graphs*.  Inf. Syst., 45:61–68, 2014
+
+[14] M. E. Houle and M. Nett. *Rank-based similarity search: Reducing the dimensional dependence*. IEEE TPAMI, 37(1):136–150, 2015.
+
+[15] W. Dong. [*Kgraph website*](http://www.kgraph.org).
+
+[16] W. Dong, M. Charikar, and K. Li. *Efficient k-nearest neighbor graph construction for generic similarity measures*. In WWW, 2011.
+
+[17] A. Babenko and V. S. Lempitsky. *The inverted multi-index*. In CVPR, pages 3069–3076, 2012.
+
 
 
 
