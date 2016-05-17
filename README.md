@@ -19,7 +19,8 @@ sophistication in utilizing the hardware specific features to speed up the query
 
 - **Exact KNN as the ground truth**. In some existing works, each data point has a label (typically in classification or clustering applications) and the labels are regarded as the ground truth when evaluating the recall of approximate NN algorithms. In our benchmark, we use the exact KNN points as the ground truth as this works for all datasets and majority of the applications.
 
-Currently, we evaluate 15 representative NNS algorithms on 20 datasets where details are reported in [1] .
+Currently, we evaluate 15 representative NNS algorithms on 20 datasets where details are reported in our [experiment paper]
+(http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1].
 
 ## ALGORITHMS EVALUTED 
 
@@ -27,15 +28,21 @@ Below are brief introuductions of the algorithms evaluated in the benchmark, whi
 
 #### 1. LSH-BASED METHODS
 - **QALSH** Query-Aware LSH ([2],PVLDB’15). 
-  [Originial source code](http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz)
+
+[Originial source code](http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz)
 
 - **SRS** ([3], PVLDB’14).
-Originial source code: https://github.com/DBWangGroupUNSW/SRS
+
+[Originial source code](https://github.com/DBWangGroupUNSW/SRS)
 
 #### 2. ENCODING-BASED METHODS
 
 - **SGH** Scalable Graph Hashing ([4], IJCAI’15).
-Originial source code: http://cs.nju.edu.cn/lwj
+[Originial source code](http://cs.nju.edu.cn/lwj)
+
+- **AGH** Anchor Graph Hashing ([5],ICML’11).
+[Originial source code](http://www.ee.columbia.edu/ln/dvmm/downloads)
+
 
 #### 3. TREE-BASED SPACE PARTITION METHODS
 
@@ -45,7 +52,7 @@ Originial source code: http://cs.nju.edu.cn/lwj
 
 ## EXPERIMENT PAPER  
 
-In our experiment paper[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
+In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
 
 - comparing all the methods without adding any implementation tricks, which makes the comparison more fair; 
 - evaluating all the methods using multiple measures; and
