@@ -41,19 +41,19 @@ Note that both external memory and in-memory versions of **SRS** are available.
 
 - **SGH** Scalable Graph Hashing ([4], IJCAI’15). 
 [Originial source code](http://cs.nju.edu.cn/lwj). 
-- Source codes (index construction and search) are implemented by MATLAB. 
-- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
+  1. Source codes (index construction and search) are implemented by MATLAB. 
+  2. In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 - **AGH** Anchor Graph Hashing ([5], ICML’11). 
 [Originial source code](http://www.ee.columbia.edu/ln/dvmm/downloads)
-- Source codes (index construction and search) are implemented by MATLAB. 
-- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
+  1. Source codes (index construction and search) are implemented by MATLAB. 
+  2. In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 
 - **NSG** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
 [Originial source code](https://github.com/pyongjoo/nsh)
-- Source codes (index construction and search) are implemented by MATLAB. 
-- In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
+  1. Source codes (index construction and search) are implemented by MATLAB. 
+  2. In our implementation, We use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 - **SH** Selective Hashing ([7], KDD’15). 
 [Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). Note that we have confirmed with the author that the source code is KDD'15 paper, not the SIGMOD'14 paper.  
