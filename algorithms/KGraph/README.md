@@ -26,7 +26,7 @@ kgraph_index.sh
 ```
 kgraph_search.sh
 ```
-Note that, in our experiment paper, we use P value of KGraph (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall).
+Note that, in our experiment paper, we use P value of KGraph search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall).
 
 
 
