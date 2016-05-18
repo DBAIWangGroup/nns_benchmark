@@ -12,7 +12,7 @@ path=`pwd`
 
 cd ../../data
 
-for data in audio sift
+for data in audio # sift
 do 
 
 fvec2lshkit ${data}_base.fvecs ${data}_base.lshkit
