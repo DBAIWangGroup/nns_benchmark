@@ -93,6 +93,7 @@ Originial source code is obtained from authors by email, who kindly allow us to 
 - **KGraph** ([15] [16], WWW'11). 
 [Originial source code](https://github.com/aaalgo/kgraph)
   1. We disabled SIMD and multi-threading techniques in **KGraph**.
+  2. We reduce the index size of KGraph by not keeping the distances of the edges, which is not used in the search process. 
 
 - **DPG** Diversified Proximity Graph ([1]). 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark)
