@@ -2,6 +2,11 @@
 
 This is a modified version based on http://www.kgraph.org/
 
+## Prerequisites
+- A modern compiler that supports C++11 and G++ 4.7
+- linux system 
+- Boost (dev version) installed. Note that we need to set the paths of the Boost installed in **build.sh**.
+- 
 ## Compile 
 
 build the index construction and search programs, namely kgraph_index and kgraph_search.
@@ -26,6 +31,5 @@ kgraph_index.sh
 kgraph_search.sh
 ```
 Note that, in our experiment paper, we use P value of KGraph search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall).
-
 
 
