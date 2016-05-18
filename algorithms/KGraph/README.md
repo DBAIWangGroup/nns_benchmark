@@ -1,7 +1,6 @@
-### kgraph
-====== 
-original source file obtained form http://www.kgraph.org/
+# KGraph
 
+This is a modified version based on http://www.kgraph.org/
 
 ## Compile 
 
