@@ -9,7 +9,7 @@ Data downloaded should be located at *nns_benchmark/data* directory.
 ### Data format 
 Please refer to [corpus-texmex](http://corpus-texmex.irisa.fr/) for the details of the formats.
 Particularly, we use *.fvecs* format for data points and query points, and *.ivecs* format for ground truth.
-
+Note that different data format will be used by some other algorithms, and we provide tools for the data format convert.
 
 ### REMARK
 We removed the duplications of the data points after downloaded from corresponding websites.
