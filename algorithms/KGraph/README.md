@@ -15,16 +15,23 @@ build the index construction and search programs, namely kgraph_index and kgraph
 ```
 build.sh
 ```
-two data convert programs, fvec2lshkit and lshkit2fvec, are also generated.
+Two data convert programs, fvec2lshkit and lshkit2fvec, are also generated, which are copied to the data directory of the NNS benchmark (i.e, nns_benchmark/data) 
 
-In the build.sh, we also copy these two programs to the data directory of the NNS benchmark and 
-convert the sample data (audio by default) from [*fvecs*](http://corpus-texmex.irisa.fr/) format to [*lshkit*](http://www.kgraph.org/index.php?n=Main.LshkitFormat) format, including data points, query points and ground truth results.
+## convert data 
+
+```
+convert_data.sh 
+```
+
+Convert the sample data (audio by default) from [*fvecs*](http://corpus-texmex.irisa.fr/) format to [*lshkit*](http://www.kgraph.org/index.php?n=Main.LshkitFormat) format, including data points, query points and ground truth results. Please ensure that the data with fvecs format have been downloaded and put to the data directory (i.e, nns_benchmark/data). 
 
 ## Construct K-NN graph 
 
 ```
 kgraph_index.sh
 ```
+Build K-NN graphs based on the data points, which is put to its index directory (i.e., nns_benchmark/index/kgraph).
+Note that the suffix of the index file name (e.g., audio.kgraph_40) represents the number of neighbors kept in the K-NN graph.
 
 ## Search on the K-NN graph
 
