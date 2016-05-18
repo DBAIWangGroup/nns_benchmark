@@ -11,3 +11,5 @@ Particularly, we use *.fvecs* format for data points and query points, and *.ive
 
 
 ### REMARK
+We removed the duplications of the data points after downloaded from corresponding websites.
+For each dataset, we reserved 200 data points as the query points. The ground truth results are provided for each dataset.
