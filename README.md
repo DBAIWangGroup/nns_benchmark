@@ -23,7 +23,6 @@ Currently, we evaluate 15 representative NNS algorithms on 20 datasets where det
 (http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1].
 
 ## ALGORITHMS EVALUTED 
------------------------
 
 All the original source codes used in this benchmark are publicly available. Algorithms are implemented in C++ unless otherwise specified. We carefully go through all the implementations and make necessary modifications to for fair comparisons. For instance, we re-implement the search process of some algorithms in C++. We also disable the multi-threads, SIMD instructions, fast-math, and hardware prefetching technique. 
 
@@ -174,7 +173,6 @@ each as a 500-dimensional bag-of-words vector.
 - [**Yout**](http://www.cs.tau.ac.il/~wolf/ytfaces/index.html) contains 3,425 videos of 1,595 different people. All the videos were downloaded from YouTube. An average of 2.15 videos are available for each subject. The shortest clip duration is 48 frames, the longest clip is 6,070 frames, and the average length of a video clip is 181.3 frames.
 
 ## PERFORMANCE EVALUATION and ANALYSES 
------------------------
 
 In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we conduct comprehensive experimental study of state-of-the-art NNS methods across several different research areas. Our contribution include:
 
@@ -186,7 +184,6 @@ In our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1], we cond
 - We group algorithms into several categories, and then perform detailed analysis on both intra- and inter-category evaluations. Our data-based analyses provide confirmation of useful principles to solve the problem, the strength and weakness of some of the best methods, and some initial explanation and understanding of why some datasets are harder than others. The experience and insights we gained throughout the study enable us to engineer a  new empirical algorithm, DPG, that outperforms all the existing algorithms in majority of the settings and is the most robust in most aspects.
  
 ## REFERENCES 
------------------------
 
 [1] W. Li, Y. Zhang, Y. Sun, W. Wang, W. Zhang, X. Lin, *Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement*. [Full Version](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)
 
