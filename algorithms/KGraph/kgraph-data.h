@@ -43,7 +43,7 @@ namespace kgraph {
         struct l2sqr {
             template <typename T>
             static float apply (T const *t1, T const *t2, unsigned dim) {
-				cout<<"apply \n";
+				// cout<<"apply \n";
                 float r = 0;
                 for (unsigned i = 0; i < dim; ++i) {
                     float v = float(t1[i]) - float(t2[i]);
