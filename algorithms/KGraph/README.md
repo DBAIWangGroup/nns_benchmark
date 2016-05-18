@@ -6,7 +6,7 @@ This is a modified version based on http://www.kgraph.org/
 - A modern compiler that supports C++11 and G++ 4.7
 - linux system 
 - Boost (dev version) installed. Note that we need to set the paths of the Boost installed in **build.sh**.
-- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded from, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
+- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
  
 ## Compile 
 
