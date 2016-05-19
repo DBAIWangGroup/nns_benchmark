@@ -1,8 +1,11 @@
 
-mkdir ../index 
-sh ./indexer.sh ../../../data/audio_base.fvecs 50 ../index/audio.50tree ../index/index.txt
+k=20
+ntree=50
 
+mkdir ../index 
+sh ./indexer.sh ../../../data/audio_base.fvecs ${ntree} ../index/audio.${ntree}tree ../index/index_${ntree}.txt
 
 mkdir ../result
 
-sh ./searcher.sh ../index/audio.50tree ../../../data/audio_query.fvecs ../../../data/audio_groundtruth.fvecs 20 ../result/audio_50tree.txt
+sh ./searcher.sh ../index/audio.${ntree}tree ../../../data/audio_query.fvecs ../../../data/audio_groundtruth.fvecs ${k} ../result/audio_${ntree}tree.txt
+

@@ -6,10 +6,10 @@ output_path=$5
 
 cd ../src
 
-for c in 100 300 1000
+for stop in 100 300 400 500 800 1000
 do
 
-./searcher -i ${index_path} -q ${query_path} -g ${gnd_path} -o ${output_path} -k ${k} -c ${c}  
+./searcher -i ${index_path} -q ${query_path} -g ${gnd_path} -o ${output_path} -k ${k} -c ${stop}  
 done
 
 
