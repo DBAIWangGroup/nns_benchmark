@@ -1,15 +1,16 @@
 # DATA used in the NNS Benchmark 
 
-Below are Dropbox share links for some of datasets evaluated in the benchmark.
-Data downloaded should be located at **nns_benchmark/data** directory.
+For each dataset (e.g., audio), we have files for data points (e.g., audio_base.lshkit, query points (e.g., audio_query.lshkit) 
+and ground truth files (e.g., audio_groundtruth.lshkit). Three different file formats are used by existing algorithms evaluated ,
+including [**fvecs**](http://corpus-texmex.irisa.fr), [**lshkit**]() and [**txt**] (plain text).
 
-- Audio ([data](https://www.dropbox.com/s/teqte5esxz0j0bx/audio_base.fvecs?dl=0), [query](https://www.dropbox.com/s/4r4tu5y5623i41v/audio_query.fvecs?dl=0), [groud truth](https://www.dropbox.com/s/gezm7hq2yryttcq/audio_groundtruth.ivecs?dl=0))
-- Sift ([data](https://www.dropbox.com/s/vb6w935xy1u7f5l/sift_base.fvecs?dl=0), [query](https://www.dropbox.com/s/kd3cgmivfi9rr1f/sift_query.fvecs?dl=0), [groud truth](https://www.dropbox.com/s/m3ud3s8z2dwn42p/sift_groundtruth.ivecs?dl=0))
 
-### Data format 
-Please refer to [corpus-texmex](http://corpus-texmex.irisa.fr/) for the details of the formats.
-Particularly, we use *.fvecs* format for data points and query points, and *.ivecs* format for ground truth.
-Note that different data format will be used by some other algorithms, and we provide tools for the data format convert.
+Please **download** the following compressed audio data with three format as the sample data used in our examples.
+Data downloaded should be unzipped and located at **nns_benchmark/data** directory.
+
+- [Audio] (https://www.dropbox.com/s/1hhaz08i3qk4ett/audio.zip?dl=0). Audio has about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.
+
+More dataset will be uploaded soon. 
 
 ### REMARK
 We removed the duplications of the data points after downloaded from corresponding websites.
