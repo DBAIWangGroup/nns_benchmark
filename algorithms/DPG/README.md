@@ -19,7 +19,7 @@ build.sh
 Two data convert programs, fvec2lshkit and lshkit2fvec, are also generated, which are copied to the data directory of the NNS benchmark (i.e, nns_benchmark/data) 
 
 
-## Construct K-NN graph 
+## Construct Diversified Proxmity Graph (DPG) (DPG/script)
 
 ```
 build_index.sh
@@ -27,11 +27,11 @@ build_index.sh
 Build K-NN graphs based on the data points, then diversify the K-NN graph to generate the DPG graph. 
 To save the space, one may directly build a DPG graph by diversifying the K-NN graph constructed by KGraph (i.e., index files uder KGraph/index directory). Note that for a DPG graph with L=20 (i.e., 20 neighbors per data point), we need diversify the KGraph with L=40 (i.e., 40 neighbours per data point) because we choose half of the neighbors, and  the also include reverse edges. By doing this, the size of DPG is the same as KGraph in the worse case.   
 
-## Search on the K-NN graph
+## Search on the K-NN graph (DPG/script)
 
 ```
 search.sh
 ```
-Note that, in our experiment paper, we use P value of KGraph search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall).
+Note that, in our experiment paper, we use P value of DPG search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall). This is exactly the same with KGraph.
 
 
