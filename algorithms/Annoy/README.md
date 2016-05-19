@@ -1,6 +1,6 @@
 # Annoy 
 
-Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. Please refer to [**Annoy**](https://github.com/spotify/annoy) for more details. 
+Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. Please refer to [**Annoy** at GitHub](https://github.com/spotify/annoy) for more details. 
 
 
 
