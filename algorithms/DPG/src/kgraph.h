@@ -170,7 +170,11 @@ namespace kgraph {
 		virtual void output_info(int const id) = 0; // output info for id-th point
 		virtual void merge(char const * graph_path, char const * id_path) = 0;
 		virtual void test_connectivity(unsigned dest) = 0;
-		virtual void remove_near_edges(IndexOracle const &oracle, const int edge_num) = 0;
+		
+        virtual void remove_near_edges(IndexOracle const &oracle, const int edge_num) = 0;  // old
+        
+        virtual void remove_near_edges_v2(IndexOracle const &oracle, const int edge_num)=0; // new
+
         virtual float statistics(IndexOracle const &oracle, const int edge_num) = 0;
         virtual void diversify_by_cut(IndexOracle const &oracle, const int edge_num) = 0;
 		virtual void remove_near_edges_2(IndexOracle const &oracle, vector<unsigned> const &edge_num, unordered_set<unsigned> const &skip_set) = 0;
