@@ -10,7 +10,7 @@ Data downloaded should be unzipped and located at **nns_benchmark/data** directo
 
 - [Audio] (https://www.dropbox.com/s/1hhaz08i3qk4ett/audio.zip?dl=0). Audio has about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.
 
-More dataset will be uploaded soon. 
+More datasets evaluated in our [experiment paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf) will be uploaded soon. 
 
 ### REMARK
 We removed the duplications of the data points after downloaded from corresponding websites.
