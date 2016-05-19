@@ -1,6 +1,6 @@
 # KGraph
 
-This is a modified version of [**KGraph**](http://www.kgraph.org), which is continuously maintained by [Dr. Wei Dong](https://github.com/aaalgo)
+This is a modified version of [**KGraph**](http://www.kgraph.org). The original version of **KGraph** which is continuously maintained by [Dr. Wei Dong](https://github.com/aaalgo).
 
 Main differences:
 
