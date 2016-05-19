@@ -1,16 +1,17 @@
-# KGraph
+# DPG
 
-This is a modified version based on http://www.kgraph.org/
+Diversified Proximity Graph (**DPG**) is an extension of [**KGraph**](http://www.kgraph.org/) which consider the diversity of the K-NN graph 
 
 ## Prerequisites
 - A modern compiler that supports C++11 and G++ 4.7
 - linux system 
 - Boost (dev version) installed. Note that we need to set the **paths** of the Boost installed in **Makefile**.
 - [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
- 
-## Compile 
 
-build the index construction and search programs, namely kgraph_index and kgraph_search.
+ 
+## Compile (DPG/src)
+
+build the K-NN graph construction (the same as KGraph), graph diversification ( result in new DPG index ) and search programs, namely DPG_index, DPG_diverse and DPG_search.
 
 ```
 build.sh
