@@ -1,7 +1,8 @@
 CC=g++ 
-ARCH=-msse2
-OPT=-O3
 
+#ARCH=-msse2
+
+OPT=-O3
 #OPENMP=-fopenmp
 
 boost_dir="/home/yingz/Software/boost_1_58_0/"
