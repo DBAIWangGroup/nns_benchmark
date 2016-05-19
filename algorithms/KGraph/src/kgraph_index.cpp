@@ -171,20 +171,12 @@ int main(int argc, char *argv[]) {
     }
 
     if (output_path.size()) {
+     
+      //Note that we modify the index save procedure to reduce index size    
       //kgraph->save(output_path.c_str());
     }
 
-
-    /*
-    // add the diversification part here 
-    cerr << "Start the diversification process..." << endl << endl;
-    kgraph->remove_near_edges(oracle, params.L/2); // here not knn's k, L is the length of NN list ( note that the true NN list length might be smaller than L) 
-    // reverse the edges here 
-    cerr << "Add reverse edges ..." << endl << endl;
-    kgraph->add_backward_edges();
-    if (output_path.size()) {
-      kgraph->save(output_path.c_str());
-      }*/
+  
     
     delete kgraph;
 
