@@ -16,7 +16,7 @@ HEADERS=kgraph.h kgraph-data.h RandGen.h
 
 PROGS=DPG_index DPG_diverse DPG_search
 
-RELEASE_SRC=Makefile LICENSE kgraph.h kgraph-data.h DPG_index.cpp DPG_search.cpp kgraph_index.cpp
+RELEASE_SRC=Makefile LICENSE kgraph.h kgraph-data.h DPG_index.cpp DPG_search.cpp DPG_diverse.cpp
 
 $(PROGS): %:	%.cpp $(HEADERS) $(COMMON)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $*.cpp $(COMMON) $(LDLIBS)
