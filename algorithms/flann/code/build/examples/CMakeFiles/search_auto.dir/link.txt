@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-2/root/usr/bin/c++   -O2 -g -DNDEBUG   CMakeFiles/search_auto.dir/search_auto.cpp.o  -o ../bin/search_auto -rdynamic /home/yzhang4/HD/home/liwen/Downloads/software/HDF5/lib/libhdf5.so -lz -lm -Wl,-rpath,/home/yzhang4/HD/home/liwen/Downloads/software/HDF5/lib: 

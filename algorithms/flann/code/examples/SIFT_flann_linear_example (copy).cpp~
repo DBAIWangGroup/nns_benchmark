@@ -1,0 +1,63 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using std::endl;
+using std::ofstream;
+
+float dist(float *a,float *b,size_t size)
+{
+	float dist=0;
+	float diff=0;
+	for(size_t i=0;i<size;i++)
+	{
+		diff = *a++ - *b++;
+		dist+= diff*diff;
+	}
+	return dist;
+}
+int main(int argc, char** argv)
+{
+    
+
+    Matrix<float> dataset;
+    Matrix<float> query;
+    Matrix<int> groundtruth;
+	load_from_file(dataset, "/home/liwen/Downloads/Dataset/SIFT1M/sift/data/dataset.hdf5","dataset");
+    load_from_file(query, "/home/liwen/Downloads/Dataset/SIFT1M/sift/data/dataset.hdf5","query");
+    
+    ofstream out;
+    out.open("/home/liwen/Downloads/Dataset/SIFT1M/sift/exp_fig/result/flann_Linear_result.txt");
+    
+    Matrix<float> meandists(new float[query.rows*1], query.rows, 1);
+	Matrix<float> mindists(new float[query.rows*1],query.rows,1);
+	for(int i=0;i<query.rows;i++)
+	{
+		for(int j=0
+		float mindist= dist(query[i],
+	}
+    start_time_=clock();
+    index.knnSearch(query, indices, dists, nn, flann::SearchParams());
+    double search_time = double(clock()-start_time_)/CLOCKS_PER_SEC;
+ 	out<< search_time/query.rows <<" #search_time "<<endl;
+
+    flann::save_to_file(indices,"/home/liwen/Downloads/Dataset/SIFT1M/sift/gnd/Linear_result.hdf5","result");
+    delete[] indices.ptr();
+    delete[] dists.ptr();
+    
+
+    delete[] dataset.ptr();
+    delete[] query.ptr();
+    
+  
+    
+    return 0;
+}
+
+

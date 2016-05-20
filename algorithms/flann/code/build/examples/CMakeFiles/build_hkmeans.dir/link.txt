@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-2/root/usr/bin/c++   -O2 -g -DNDEBUG   CMakeFiles/build_hkmeans.dir/build_hkmeans.cpp.o  -o ../bin/build_hkmeans -rdynamic /home/yzhang4/HD/home/liwen/Downloads/software/HDF5/lib/libhdf5.so -lz -lm -Wl,-rpath,/home/yzhang4/HD/home/liwen/Downloads/software/HDF5/lib: 

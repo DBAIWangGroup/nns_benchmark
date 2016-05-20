@@ -1,0 +1,136 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+#include <getopt.h>
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using namespace std;
+using std::endl;
+using std::ofstream;
+
+float compute_recall(const flann::Matrix<int>& match, const flann::Matrix<int>& indices)
+{
+	int count = 0;
+
+	assert(match.rows == indices.rows);
+	size_t nn = std::min(match.cols, indices.cols);
+
+	for (size_t i=0; i<match.rows; ++i) {
+		for (size_t j=0;j<nn;++j) {
+			for (size_t k=0;k<nn;++k) {
+				if (match[i][j]==indices[i][k]) {
+					count ++;
+				}
+			}
+		}
+	}
+
+	return float(count)/(nn*match.rows);
+}
+
+float compute_recall_at(const size_t nn, const flann::Matrix<int>& match, const flann::Matrix<int>& indices)
+{
+	int count = 0;
+
+	assert(match.rows == indices.rows);
+	//size_t nn = match.cols; //std::min(match.cols, indices.cols);
+
+	for (size_t i=0; i<match.rows; ++i) 
+	{
+		for (size_t j=0;j<nn;++j) 
+		{
+			if (match[i][j]==indices[i][0]) 
+			{
+				count ++;
+				break;
+			}
+		}
+	}
+
+	return float(count)/(match.rows);
+}
+
+
+int main(int argc, char** argv)
+{
+
+	const struct option longopts[] ={
+    {"help",                        no_argument,       0, 'h'},
+    {"file_path",                   required_argument, 0, 'f'},
+    {"data_name",                   required_argument, 0, 'd'},
+    {"branches",                    required_argument, 0, 'b'},
+    {"nn",                          required_argument, 0, 'k'},
+  };
+  	int index;
+  	int iarg = 0;
+	char file_path[20];
+	char data_name[10];
+	int branches;
+	int nn;
+
+	while (iarg != -1) {
+    iarg = getopt_long(argc, argv, "f:d:k:b:h",longopts, &index);
+
+    switch (iarg) {
+      case 'f':
+        if (optarg) {
+			strcpy(file_path, optarg);
+        }
+        break;
+      case 'd':
+        if (optarg) {
+			strcpy(data_name, optarg);
+        }
+        break;
+      case 'k':
+        if (optarg) {
+			nn = atoi(optarg);
+        }
+        break;
+      case 'b':
+        if (optarg) {
+          branches = atoi(optarg);
+        }
+        break;
+    }
+	}
+
+    Matrix<float> dataset;
+    Matrix<float> query;
+    Matrix<int> groundtruth;
+	Matrix<int> indices;
+
+	char data_path[100];
+	sprintf(data_path,"/home/liwen/Downloads/Dataset/%s/data/dataset.hdf5",file_path);
+    load_from_file(dataset, data_path,"dataset");
+    load_from_file(query, data_path,"query");
+    load_from_file(groundtruth,data_path,"groundtruth");
+    
+	char indices_path[100];
+	sprintf(indices_path,"/home/liwen/Downloads/Dataset/%s/result/hkmeans_result_%dbranches_%dk.hdf5",file_path,branches,nn);
+    load_from_file(indices,indices_path,"result");
+	cout<< indices.rows << " " << indices.cols<<endl;
+
+    ofstream out;
+	char result_path[100];
+	sprintf(result_path,"/home/liwen/Downloads/Dataset/%s/exp_fig/result/Flann/flann_HKMeans_%dbranches_%dk_measure.txt",file_path,branches,nn);
+    //out.open(result_path);
+    
+	//float recall = 
+	//float rde = 
+	//float mrr = 
+	//float nc = 
+	//float map = 
+	//float dcg = 
+
+	//compute_precision(indices,groundtruth);
+	//out_recall.setf(ios::fixed);
+	//out_recall << recall[0] << " " << recall[1] << " " << recall[2] << " " << recall[3] << " " << recall[4] << " " << search_time/query.rows <<" #N_"<< checks[c] <<" "<<endl;    
+    return 0;
+}
+
+

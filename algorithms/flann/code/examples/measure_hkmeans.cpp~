@@ -1,0 +1,215 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+#include <getopt.h>
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using namespace std;
+using std::endl;
+using std::ofstream;
+
+float compute_recall(int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+	int count = 0;
+	assert(match.rows == indices.rows);
+	for (int i=0; i<results.rows; ++i) {
+		int re_n=0;
+		int gs_n=0;
+		while(re_n<k && gs_n<k)
+		{
+			if(results[i][re_n] == gnds[i][gs_n])
+			{
+				count++;
+				re_n++;
+				gs_n++;
+			}
+			else
+				gs_n++;
+		}
+	}
+	return float(count)/(k*results.rows);
+}
+
+void compute_relative_distance_error(int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds) 
+{
+	float avg = 0;
+    for (int i = 0; i <results.rows; ++i) {
+        for(int j=0; j<k; j++)
+			float d_qr=0;
+           float d=(re_row[re_n]-gs_row[gs_n])/gs_row[gs_n];
+				if(d<=4)
+					dist += d;
+				else
+					dist+=4; 
+  				++gs_n;
+                ++re_n;
+			}
+			avg += dist/K;
+        }
+        
+    }
+
+float compute_number_closer (int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{        
+	float sum = 0;
+    for (int i = 0; i < results.rows; ++i) {
+		float rate = 0.0;
+		for (int gs_n=0;gs_n < k ;gs_n++)
+		{
+			for(int re_n=0; re_n < k; re_n++)
+			{
+				if(gnds[i][gs_n]==results[i][re_n])
+				{
+					rate += (float)(gs_n+1)/(re_n+1);
+					break;
+				}
+			}
+		}
+        sum += rate/k;
+    }
+    return sum / results.rows;
+}
+
+float compute_mean_reciprocal_rank (int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+	float sum = 0;
+    for (int i = 0; i < results.rows; ++i) {
+		float rate = 0.0;
+		for(int re_n=0; re_n < k; re_n++)
+		{
+			if(gnds[i][0]==results[re_n])
+			{
+				rate += 1.0/(re_n+1);
+				break;
+			}
+		}
+        sum += rate;
+    }
+    return sum / results.rows;
+}
+
+float compute_mean_average_precision (int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+     float sum = 0;
+     for (int i = 0; i < results.rows; ++i) {
+			float rate = 0.0;
+			unsigned re_n = 0;
+			int count = 0;
+			for(unsigned gs_n=0; gs_n < k; gs_n++)
+			{
+				if(gs_row[gs_n]==re_row[re_n])
+				{
+					count++;
+					rate += 1.0*(count)/(gs_n+1);
+					re_n ++;
+				}
+			}
+            sum += rate/k;
+        }
+        return sum / results.rows;
+    }
+
+float compute_discounted_culmulative_gain(int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+    float sum = 0;
+    for (unsigned i = 0; i < results.rows; ++i) {
+        
+		float rate = 0.0;
+		unsigned re_n = 0;
+		for(unsigned gs_n=0; gs_n <k; gs_n++)
+		{
+			if(gnds[i][gs_n]==results[i][re_n])
+			{
+				rate += 1.0/log2(gs_n+2);
+				re_n ++;
+			}
+		}
+        sum += rate;
+    }
+    return sum / results.rows;
+}
+
+
+int main(int argc, char** argv)
+{
+
+	const struct option longopts[] ={
+    {"help",                        no_argument,       0, 'h'},
+    {"file_path",                   required_argument, 0, 'f'},
+    {"data_name",                   required_argument, 0, 'd'},
+    {"branches",                    required_argument, 0, 'b'},
+    {"nn",                          required_argument, 0, 'k'},
+  };
+  	int index;
+  	int iarg = 0;
+	char file_path[20];
+	char data_name[10];
+	int branches;
+	int nn;
+
+	while (iarg != -1) {
+    iarg = getopt_long(argc, argv, "f:d:k:b:h",longopts, &index);
+
+    switch (iarg) {
+      case 'f':
+        if (optarg) {
+			strcpy(file_path, optarg);
+        }
+        break;
+      case 'd':
+        if (optarg) {
+			strcpy(data_name, optarg);
+        }
+        break;
+      case 'k':
+        if (optarg) {
+			nn = atoi(optarg);
+        }
+        break;
+      case 'b':
+        if (optarg) {
+          branches = atoi(optarg);
+        }
+        break;
+    }
+	}
+
+    Matrix<float> dataset;
+    Matrix<float> query;
+    Matrix<int> groundtruth;
+	Matrix<int> indices;
+
+	char data_path[100];
+	sprintf(data_path,"/home/liwen/Downloads/Dataset/%s/data/dataset.hdf5",file_path);
+    load_from_file(dataset, data_path,"dataset");
+    load_from_file(query, data_path,"query");
+    load_from_file(groundtruth,data_path,"groundtruth");
+    
+	char indices_path[100];
+	sprintf(indices_path,"/home/liwen/Downloads/Dataset/%s/result/hkmeans_result_%dbranches_%dk.hdf5",file_path,branches,nn);
+    load_from_file(indices,indices_path,"result");
+	cout<< indices.rows << " " << indices.cols<<endl;
+
+    ofstream out;
+	char result_path[100];
+	sprintf(result_path,"/home/liwen/Downloads/Dataset/%s/exp_fig/result/Flann/flann_HKMeans_%dbranches_%dk_measure.txt",file_path,branches,nn);
+    //out.open(result_path);
+    
+	float recall = compute_recall(nn,indices,groundtruth);
+	float rde = compute_relative_distance_error(nn,indices,groundtruth);
+	float mrr = compute_mean_reciprocal_rank(nn,indices,groundtruth);
+	float nc = compute_number_closer(nn,indices,groundtruth);
+	float map = compute_mean_average_precision(nn,indices,groundtruth);
+	float dcg = compute_discounted_culmulative_gain(nn,indices,groundtruth);
+
+	//compute_precision(indices,groundtruth);
+	//out_recall.setf(ios::fixed);
+	//out_recall << recall[0] << " " << recall[1] << " " << recall[2] << " " << recall[3] << " " << recall[4] << " " << search_time/query.rows <<" #N_"<< checks[c] <<" "<<endl;    
+    return 0;
+}
+
+

@@ -1,0 +1,57 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using std::endl;
+using std::ofstream;
+
+int main(int argc, char** argv)
+{
+   
+    Matrix<float> dataset;
+    Matrix<float> query;
+
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/Trevi/data/dataset.hdf5","dataset");
+    load_from_file(query, "/home/liwen/Downloads/Dataset/Trevi/data/dataset.hdf5","query");
+    cout<<"read"<<endl;
+    int nn =100;
+    
+    ofstream out;
+    out.open("/home/liwen/Downloads/Dataset/Trevi/exp_fig/result/Flann/flann_Linear_result.txt");
+
+    //build index
+    Index<L2<float> > index(dataset, flann::LinearIndexParams());
+    index.buildIndex();
+    out<<"#Algorithm = Linear"<<endl;
+                                                                                            
+    // do a knn search, using 128 checks
+    
+    Matrix<int> indices(new int[query.rows*nn], query.rows, nn);
+    Matrix<float> dists(new float[query.rows*nn], query.rows, nn);
+
+    clock_t start_time_=clock();
+    index.knnSearch(query, indices, dists, nn, flann::SearchParams());
+    double search_time = double(clock()-start_time_)/CLOCKS_PER_SEC;
+    
+	out<< search_time/query.rows <<" #search_time"<<endl;
+
+    flann::save_to_file(indices,"/home/liwen/Downloads/Dataset/Trevi/gnd/Linear_result.hdf5","result");
+    delete[] indices.ptr();
+    delete[] dists.ptr();
+    
+
+    delete[] dataset.ptr();
+    delete[] query.ptr();
+    
+  
+    
+    return 0;
+}
+
+

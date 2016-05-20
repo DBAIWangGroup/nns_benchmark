@@ -1,0 +1,83 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using namespace std;
+using std::endl;
+using std::ofstream;
+
+
+int main(int argc, char** argv)
+{
+    //Audio
+    {
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/Audio/data/dataset.hdf5","dataset");
+    cout<<"Audio   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> > index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr();   
+    } 
+/* 
+    //Ran_data
+    {
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/Ran_Data/data/dataset.hdf5","dataset");
+    cout<<"MNIST   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> > index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr();   
+    }
+
+	{
+    //SIFT1M
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/SIFT1M/sift/data/dataset.hdf5","dataset");
+    cout<<"SIFT1M   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> >  index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr();  
+    }
+    {
+	//GIST1M
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/GIST1M/gist/data/dataset.hdf5","dataset");
+    cout<<"GIST1M   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> >  index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr();  
+    }
+	{
+	//MNIST
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/MNIST/data/dataset.hdf5","dataset");
+    cout<<"MNIST   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> >  index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr();
+    }
+	{
+    //SIFT10M
+    Matrix<float> dataset;
+    load_from_file(dataset, "/home/liwen/Downloads/Dataset/SIFT1B/data/dataset10M.hdf5","dataset");
+    cout<<"SIFT10M   rows= "<<dataset.rows<<endl;
+    //build index
+    Index<L2<float> >  index(dataset, flann::KDTreeIndexParams(4));
+    index.buildIndex();
+    delete[] dataset.ptr(); 
+	}*/
+    return 0;
+}
+
+

@@ -1,0 +1,199 @@
+
+#include <flann/flann.hpp>
+#include <flann/io/hdf5.h>
+#include <sys/time.h>
+#include <getopt.h>
+
+#include <fstream>
+#include <stdio.h>
+
+
+using namespace flann;
+using namespace std;
+using std::endl;
+using std::ofstream;
+
+float get_distance(float* point, float* query, int dim)
+{
+	float dist=0.0;
+	for(int i=0;i<dim;i++)
+	{
+		float diff = (*point++ - *query++);
+		dist += diff*diff;
+	}
+	return dist;
+}
+
+float compute_recall(int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+	int count = 0;
+	for (unsigned i=0; i<results.rows; ++i) {
+		std::set<unsigned> gnd_row;
+		for(int j=0;j<k;j++)
+			gnd_row.insert(gnds[i][j]);
+		for(unsigned j=0;j<k;j++)
+			if(gnd_row.find(results[i][j])!=gnd_row.end())
+			{
+				count++;
+			}
+	}
+	return float(count)/(k*results.rows);
+}
+
+float compute_relative_distance_error(int k, const flann::Matrix<float>& dataset, const flann::Matrix<float>& query, const flann::Matrix<float>& dists, const flann::Matrix<int>& gnds) 
+{
+	float avg = 0.0;
+    for (unsigned i = 0; i <dists.rows; ++i) //dists.rows
+	{
+		float dist = 0.0;
+        for(unsigned j=0; j<k; j++)
+		{
+			float d_qr = dists[i][j];   //query.cols
+			float d_qg = get_distance(dataset[gnds[i][j]],query[i],query.cols);
+            float d=(d_qr - d_qg)/d_qg;
+			if(d<=4)
+				dist += d;
+			else
+				dist += 4; 
+		}
+		avg += dist;
+    } 
+	return avg/k/dists.rows;     
+}
+
+float compute_mean_average_precision (int k,const flann::Matrix<int>& results, const flann::Matrix<int>& gnds)
+{
+     float sum = 0;
+     for (unsigned i = 0; i < results.rows; ++i) {
+		float rate = 0.0;
+		int count = 0;
+		std::set<unsigned> gnd_row;
+		int found_last=0;
+		for(unsigned gs_n=0; gs_n < k; gs_n++)
+		{
+			gnd_row.insert(gnds[i][gs_n]);
+			int count=0;
+			for(unsigned j=0;j<=gs_n;j++)
+				if(gnd_row.find(results[i][j])!=gnd_row.end())
+				{
+					count++;
+				}
+			rate += count*(count-found_last)*1.0/(gs_n+1);
+			found_last=count;
+		}
+        sum += rate/k;
+    }
+    return sum / results.rows;
+}
+
+float diff_timeval(timeval t1, timeval t2) {
+  return (float) (t1.tv_sec - t2.tv_sec) + (t1.tv_usec - t2.tv_usec) * 1e-6;
+}
+
+int main(int argc, char** argv)
+{
+
+	const struct option longopts[] ={
+    {"help",                        no_argument,       0, 'h'},
+    {"file_path",                   required_argument, 0, 'f'},
+    {"index_path",                  required_argument, 0, 'i'},
+    {"result_path",                 required_argument, 0, 'r'},
+    {"trees",                       required_argument, 0, 't'},
+    {"nn",                          required_argument, 0, 'k'},
+  };
+  	int ind;
+  	int iarg = 0;
+	char file_path[100];
+	char index_path[100];
+	char result_path[100];
+	int trees;
+	int nn;
+
+	while (iarg != -1) {
+    iarg = getopt_long(argc, argv, "f:i:r:k:t:h",longopts, &ind);
+
+    switch (iarg) {
+      case 'f':
+        if (optarg) {
+			strcpy(file_path, optarg);
+        }
+        break;
+     case 'i':
+        if (optarg) {
+			strcpy(index_path, optarg);
+        }
+        break;
+      case 'r':
+        if (optarg) {
+			strcpy(result_path, optarg);
+        }
+        break;
+      case 'k':
+        if (optarg) {
+			nn = atoi(optarg);
+        }
+        break;
+      case 't':
+        if (optarg) {
+          trees = atoi(optarg);
+        }
+        break;
+    }
+	}
+
+    Matrix<float> dataset;
+    Matrix<float> query;
+    Matrix<int> groundtruth;
+
+    load_from_file(dataset, file_path,"dataset");
+    load_from_file(query, file_path,"query");
+    load_from_file(groundtruth, file_path,"groundtruth");
+
+    ofstream out;
+    out.open(result_path);
+
+    //build index
+    Index<L2<float> > index(dataset, flann::KDTreeIndexParams(trees));
+	clock_t start_time_=clock();
+    index.buildIndex();
+    double index_time = double(clock()-start_time_)/CLOCKS_PER_SEC;
+
+    out<< index_time <<" #index_time "<<endl;                              
+    index.save(index_path); 
+
+    //do a knn search, using 128 checks
+    int checks[19]={100,200,300,500,700,1000,1500,2000,3000,5000,7000,10000,15000,20000,30000,35000,40000,45000,50000}; 
+    for(int c=0;c<19;c++)
+    {
+
+    	Matrix<int> indices(new int[query.rows*nn], query.rows, nn);
+    	Matrix<float> dists(new float[query.rows*nn], query.rows, nn);
+
+		timeval start;
+    	gettimeofday(&start, NULL);
+    	index.knnSearch(query, indices, dists, nn, flann::SearchParams(checks[c]));
+		timeval end;
+    	gettimeofday(&end, NULL);
+    	double search_time = diff_timeval(end, start);
+   
+    	float recall = compute_recall(nn,indices,groundtruth);
+		float rde = compute_relative_distance_error(nn,dataset,query,dists,groundtruth);
+	    float map = compute_mean_average_precision(nn,indices,groundtruth);
+		search_time=search_time/query.rows;
+	
+		out.setf(ios::fixed);
+		out << recall << " " << rde <<" "<< search_time <<" #N_"<< checks[c] <<" "<<map<<" "<<endl;
+
+    	delete[] indices.ptr();
+    	delete[] dists.ptr();
+		if(recall==1)
+			break;
+    }
+
+    delete[] dataset.ptr();
+    delete[] query.ptr();
+    
+    return 0;
+}
+
+

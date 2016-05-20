@@ -1,0 +1,2 @@
+/opt/rh/devtoolset-2/root/usr/bin/ar cq ../../lib/libflann_cpp_s.a  CMakeFiles/flann_cpp_s.dir/flann/flann_cpp.cpp.o
+/opt/rh/devtoolset-2/root/usr/bin/ranlib ../../lib/libflann_cpp_s.a
