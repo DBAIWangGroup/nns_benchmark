@@ -17,7 +17,7 @@ We disabled the improved version of the distance computation and only use a sing
 
 - [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query points and ground truth results. Note that the input format is .hdf5 and all data files downloaded should be put to the knn_benchmark/data directory.
 
-##Compile 
+##Compile  (flann/code/build)
 
 Enter code/build directory and run 
 ```
@@ -29,7 +29,7 @@ then
 make
 ```
 
-##Build index
+##Build index (flann/script)
 
 ```
 build_auto.sh
@@ -42,7 +42,7 @@ build_hkmeans.sh
 build_kdtree.sh 
 ```
 
-##Search 
+##Search (flann/script)
 Corresponding search algorithms based on different indexing mechanism 
 ```
 run_auto.sh
