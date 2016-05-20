@@ -32,16 +32,29 @@ make
 ##Build index
 
 ```
-build_hkmeans.sh, 
-build_kdtree.sh, 
 build_auto.sh
 ```
-Build Hierarchical KMeans tree, Randomized KDTree and the Flann index which is selected automatical. 
+Flann will automatically choose hierarchical k-means, randomized K-Tree or linear scan according to its estimation.
+Alternatively, we can explicitly let Flann to choose hierarchical k-means or randomized K-Tree for indexing.
+
+```
+build_hkmeans.sh 
+build_kdtree.sh 
+```
 
 ##Search 
+Corresponding search algorithms based on different indexing mechanism 
 ```
-run_hkmeans.sh, run_kdtree.sh, run_auto.sh 
+run_auto.sh
+run_hkmeans.sh
+run_kdtree.sh, 
 ```
+Flann also provide linear scan algorithm 
+```
+run_linear.sh
+```
+which is used to compute speedup of other NNS algorithms.
+
 
 Note that, in our experiment paper, we use N value (retrived number of the data points) to achieve the trade-off between search speed and search quality (recall). The search performance (time and recall) results are kept in the Flann/results directory.
 
