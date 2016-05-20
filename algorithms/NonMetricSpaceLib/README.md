@@ -12,7 +12,7 @@ We disabled SIMD and multi-threading techniques. We also replace the compiler op
 - A modern compiler that supports C++11: G++ 4.7, Intel compiler 14, Clang 3.4.
 - Boost (dev version).
 - CMake (version 2.8 or over is needed).
-- pkg-config installed.
+- Eigen (dev version version 3.0 or over is needed).
 - [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query point. Note that the input format is .txt and the ground truth results can be generated before evaluating.
 
 ##Compile (NonMetricSpaceLib/code) 
