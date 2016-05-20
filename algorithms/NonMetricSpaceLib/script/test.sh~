@@ -1,5 +1,0 @@
-sh ./run_NAPP.sh ../../../data/audio_base.txt ../../../data/audio_query.txt ../gnd/audio ../result/audio_NAPP.txt 53387 200 20 1500 32 15
-
-sh ./run_SW.sh ../../../data/audio_base.txt ../../../data/audio_query.txt ../gnd/audio ../result/audio_SW.txt 53387 200 20 10 5 
-
-sh ./run_vptree.sh ../../../data/audio_base.txt ../../../data/audio_query.txt ../gnd/audio ../result/audio_vptree.txt 53387 200 20 300
