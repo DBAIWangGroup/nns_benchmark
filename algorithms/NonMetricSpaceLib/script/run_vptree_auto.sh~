@@ -1,0 +1,23 @@
+file_path=$1
+data_name=$2
+n=$3
+nq=$4
+k=$5
+
+bucket_size=150
+
+result_path="/home/yzhang4/HD/home/liwen/Downloads/Dataset/${file_path}/exp_fig/result/VP_Tree"
+for bucket_size in 100 #10 50 100 150 300
+do
+
+for target_recall in 0.8 #0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.95
+do
+
+../experiment \
+--distType float --spaceType l2 \
+--knn $k \
+--dataFile /home/yzhang4/HD/home/liwen/Downloads/Dataset/${file_path}/data/${data_name}_base.txt --maxNumData $n --queryFile /home/yzhang4/HD/home/liwen/Downloads/Dataset/${file_path}/query/${data_name}_query.txt --maxNumQuery ${nq} --cachePrefixGS ../gnd/${data_name}_${k}K --outFilePrefix "${result_path}/k=20/${bucket_size}B.txt" \
+--method vptree:desiredRecall=${target_recall},bucketSize=${bucket_size},tuneK=$k,chunkBucket=1 \
+
+done
+done
