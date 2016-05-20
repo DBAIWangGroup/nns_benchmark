@@ -1,17 +1,7 @@
 SRS - Fast Approximate Nearest Neighbor Search in High Dimensional Euclidean Space With a Tiny Index
 ====================================================================================================
 
-SRS-Mem is a C++ program for performing approximate nearest neighbor search in
-high dimension Euclidean space in the main memory. The current implementation is
-adapted from our
-[VLDB'15 research paper](http://www.cse.unsw.edu.au/~weiw/files/VLDB15-SRS-Final.pdf).
-The main modification is to use an in-memory multidimensional index (rather than
-an R-tree as in the paper), as it is often the case that our index is so small
-and can be accommodated in the main memory. Currently, the index is a modified
-version of the
-[Cover Tree](http://hunch.net/~jl/projects/cover_tree/cover_tree.html) due to
-its strong theoretical guarantees; nevertheless, any multidimensional index that
-supports incremental exact *k*NN search can be used!
+Please refer to our (GitHub reposit)[https://github.com/DBWangGroupUNSW/SRS] for more details.
 
 Features
 --------
@@ -94,86 +84,23 @@ Before start
 How to use SRS
 --------------
 
-1. Compile the program:
+1. Compile the program (SRS/src)
 
   ```
   % make all
   ```
 
-2. Use `cal_param` to calculate a feasible setting of parameters based on the
-   given constraints. The users can manually set either *m* or *the success
-   probability*. A feasible setting of parameters will be printed on the screen
-   and it can be used later in the query processing phase. The implementation is
-   based on Algorithm 6 in the paper. For example (using the toy dataset with
-   3000 points):
+2. Build Index (SRS/script)
 
   ```
-  % ./cal_param -n 3000 -m 7 -c 4
-  ```
-
-  The following message will be printed out:
+  % build.sh
 
   ```
-  A feasible setting is:
-  m = 7
-  prob_thres(-r) = 0.299203
-  T_max(-t) = 2
-  t = 0.000544
-  ```
-
-    The output indicates that, in the query processing phase, the users shall
-    use the arguments `-c 4`, `-m 7`, `-r 0.299203` and `-t 2`.
-
-  As a rule of thumb, we recommend setting *m* between 6 and 10, to begin with.
-  
-3. Use `gen_gt` to generate the ground truth of given dataset and query
-   workload. The ground truth file will be used when processing the query
-   workload. For example (using the toy dataset):
+3. Conduct search (SRS/script)
 
   ```
-  % ./gen_gt -d 192 -n 3000 -k 10 -q data/toy.q -s data/toy.ds -g data/toy.gt -y i
+  % search.sh
   ```
-
-  `-y i` indicates that each coordinates is an integer. The other option is `-y
-  f`, indicating that each coordinates is a floating point number.
-
-4. Use `srs` with the `-I` option to index the data. Users need to specify *m* and
-   *index path* in this step. For example (using the toy dataset):
-
-  ```
-  % mkdir index
-  % ./srs -I -d 192 -i index/ -m 7 -n 3000 -s data/toy.ds -y i
-  ```
-  
-5. Use `srs` with the `-Q` option to process the query workload. The
-   implementation is based on Algorithm 1 in the paper and its variants. The
-   top-_k_ approximate nearest neighbors for each query in the query workload
-   will be returned, together with the average ratio and time over all queries.
-
-    Users can use the parameter setting given by `cal_param`. For
-    example (using the toy dataset):
-  
-  ```
-  % ./srs -Q -c 4 -g data/toy.gt -i index/ -k 10 -q data/toy.q -t 2 -r 0.299203
-  ```
-
-    Alternatively, users can also specify the parameters by themselves to achieve another
-    space-time trade-off.
-    
-    
-6. The users can change the `-t` parameter to _n_ (i.e., the cardinality of the
-   dataset) to force the algorithm rely on the early-termination condition to
-   stop. This will increase the quality and slightly increase the time cost.
-   This is the `SRS-2` algorithm in the paper.
-
-7. The users can change the `-r` parameter to any number larger than 1, to force the
-   algorithm stop only on the normal-termination condition (i.e., examining _tn_
-   data points). This will substantially increase the quality and time cost.
-   This is the `SRS-1` algorithm in the paper.
-
-8. The users can change the `-c` parameter to a smaller value to achieve better
-   quality without affecting the worst case time cost. This is the `SRS-12+`
-   algorithm in the paper.
 
 
 Data Format
@@ -201,49 +128,5 @@ Data Format
   ```
   where _d_ is the dimensionality, `e_i_j` is an integer, and separated by whitespace.
 
-Hard Dataset
-------------
+ ```
 
-* Users can use `gen_hard_data` to generate a hard dataset with a user specified
-  cardinality, dimensionality and approximation ratio. The dataset contains one
-  point which is the nearest neighbor of query. All the other points are
-  (c+&#949;)-NN of query (c is user specified approximation ratio), and these
-  points are distributed randomly and uniformly on a sphere centered at the
-  query point with radius c+&#949;.
-
-* An example of using `gen_hard_data`:
-
-  ```
-  % ./gen_hard_data -n 1000000 -d 128 -c 4 -s hard.ds -q hard.q
-  ```
-
-    Then a dataset contains 1,000,000 points (i.e., `hard.ds`) and a query set
-    contains 1 query (i.e., `hard.q`) will be generated.
-
-* Users can repeat indexing and query processing using different random seeds 
-(use the `-e` parameter to specify different random seeds during the indexing 
-phase) to get empirical success probability of SRS.
-
-  Users can also run the example script `run_hard_data`:
-  
-  ```
-  % sh run_hard_data.sh
-  ```
-
-Condition of use
-----------------
-
-* SRS is distributed under the terms of the GPL License.
-* Copyright is owned by DBWang Group, University of New South Wales, Australia.
-
-Future work
------------
-
-* Support more input data formats.
-* Integrate SRS with other multidimensional indexing methods.
-
-Contact
--------------
-
-Please report bugs, feature requests, comments, or suggestions to Yifang Sun
-(`yifangs AT cse.unsw.edu.au`) or Wei Wang (`weiw AT cse.unsw.edu.au`).
