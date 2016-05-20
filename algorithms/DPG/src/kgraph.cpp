@@ -905,62 +905,10 @@ virtual void diversify_by_cut(IndexOracle const &oracle, const int edge_num){
 
     return avg_co;
         
-    } // end of function statistics 
+    } // end of function statistics   
+               
 
-    virtual void remove_near_edges(IndexOracle const &oracle, vector<unsigned> const &edge_num){ // diversity
-    if (oracle.size() != graph.size()){
-      throw runtime_error("Build kgraph before adding long edges");
-    }
-    
-    uint32_t N = oracle.size();
-
-        //#pragma omp parallel for
-    for (unsigned k = 0; k < N; k++){
-
-      //if (k % 1000 == 0) {
-      //  fprintf(stderr, "\r%d (%.3f\%)", k, 1.0 * k / N * 100);
-      //}
-      //auto const &knn = graph[k];
-          //edge_num[k] /= 2;
-      float * map = new float[N];
-      memset(map, 0, sizeof(float)*N);
-      int len = graph[k].size();
-      while(graph[k][len-1].id == 0){
-        len--;
-      }
-      if (len > 2 * edge_num[k]){
-        len = 2 * edge_num[k];
-      } 
-      for (int i = 1; i < edge_num[k]; ++i){ // the first max_edge_num elements are the remaining ones
-        float max_sum_angle = -1.0;
-        int max_pos = -1;
-        for (int cand_pos = i; cand_pos < len; cand_pos++){
-              float sum_angle = 0.0;
-              for (int ppp = 1; ppp < i; ++ppp){
-                sum_angle += oracle.angle(k, graph[k][cand_pos].id, graph[k][ppp].id);
-              }
-              //map[graph[k][cand_pos].id] += oracle.angle(k, graph[k][cand_pos].id, graph[k][i - 1].id);
-          //float sum_angle = map[graph[k][cand_pos].id];
-          if (sum_angle > max_sum_angle){
-        max_sum_angle = sum_angle;
-        max_pos = cand_pos;
-          }
-        }
-        Neighbor temp = graph[k][i];
-        graph[k][i] = graph[k][max_pos];
-        graph[k][max_pos] = temp;
-      }
-      graph[k].resize(edge_num[k]);
-      sort(graph[k].begin(), graph[k].end());
-      M[k] = edge_num[k];
-      delete[] map;
-    }
-    }
- 
-
-
-            
-    virtual void remove_near_edges_v2(IndexOracle const &oracle, const int edge_num){ // diversity
+    virtual void remove_near_edges(IndexOracle const &oracle, const int edge_num){ // diversity
 	if (oracle.size() != graph.size()){
 	  throw runtime_error("Build kgraph before adding long edges");
 	}
@@ -992,8 +940,19 @@ virtual void diversify_by_cut(IndexOracle const &oracle, const int edge_num){
 	    float max_sum_angle = -1.0;
 	    int max_pos = -1;
 	    for (int cand_pos = i; cand_pos < len; cand_pos++){
-	      map[graph[k][cand_pos].id] += oracle.angle(k, graph[k][cand_pos].id, graph[k][i - 1].id);
-	      float sum_angle = map[graph[k][cand_pos].id];
+
+
+          // this is the version before sharing computation cost   
+          float sum_angle = 0.0;
+          for (int ppp = 1; ppp < i; ++ppp){
+            sum_angle += oracle.angle(k, graph[k][cand_pos].id, graph[k][ppp].id);
+          }
+
+          // map[graph[k][cand_pos].id] += oracle.angle(k, graph[k][cand_pos].id, graph[k][i - 1].id);
+          // float sum_angle = map[graph[k][cand_pos].id];
+
+
+
 	      if (sum_angle > max_sum_angle){
 		max_sum_angle = sum_angle;
 		max_pos = cand_pos;
@@ -1008,11 +967,15 @@ virtual void diversify_by_cut(IndexOracle const &oracle, const int edge_num){
 	  sort(graph[k].begin(), graph[k].end());
 	  M[k] = edge_num;
 	  delete[] map;
-	}
+	   }
 
-    cerr << endl;
+        cerr << endl;
 
       }
+     
+
+
+
  
       virtual void remove_near_edges_2(IndexOracle const &oracle, vector<unsigned> const &edge_num, unordered_set<unsigned> const &skip_set){ // diversification, maxmin
         if (oracle.size() != graph.size()){
