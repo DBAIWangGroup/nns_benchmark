@@ -1,7 +1,7 @@
 SRS - Fast Approximate Nearest Neighbor Search in High Dimensional Euclidean Space With a Tiny Index
 ====================================================================================================
 
-Please refer to our (GitHub reposit)[https://github.com/DBWangGroupUNSW/SRS] for more details.
+Please refer to our [GitHub reposit](https://github.com/DBWangGroupUNSW/SRS) for more details.
 
 Features
 --------
@@ -39,6 +39,9 @@ Features
 
 
 
+
+
+
 How it works
 ----------------
 
@@ -62,13 +65,6 @@ projected space, until when it has found a satisfactory point (i.e.,
 early-termination condition), or it has examined _t * n_ points (i.e.,
 normal-termination condition).
 
-Before start
-------------
-
-* The users need to have Boost C++ library installed (http://www.boost.org/).
-  The Boost library is used to calculate the quantile of chi-squared
-  distribution.
-* Currently the program has only been tested on Linux.
 * There are four key parameters to the SRS algorithms:
   * _n_: number of data points. 
   * _c_: approximation ratio. 
@@ -80,6 +76,20 @@ Before start
 * In addition to these input parameters, the program also generate an internal
   parameter _t_: the fraction of data points to be examined before the search
   terminates in the normal condition. 
+
+
+Prerequisites.
+------------------
+
+- A modern compiler that supports C++11 and G++ 4.7
+
+- Currently the program has only been tested on Linux.
+- The users need to have Boost C++ library installed (http://www.boost.org/). The Boost library is used to calculate the quantile of chi-squared distribution.
+
+- Sample data (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
+
+
+* Currently the program has only been tested on Linux.
 
 How to use SRS
 --------------
