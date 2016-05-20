@@ -171,9 +171,8 @@ namespace kgraph {
 		virtual void merge(char const * graph_path, char const * id_path) = 0;
 		virtual void test_connectivity(unsigned dest) = 0;
 		
-        virtual void remove_near_edges(IndexOracle const &oracle, const int edge_num) = 0;  // old
-        
-        virtual void remove_near_edges_v2(IndexOracle const &oracle, const int edge_num)=0; // new
+        virtual void remove_near_edges(IndexOracle const &oracle, const int edge_num) = 0;        
+
 
         virtual float statistics(IndexOracle const &oracle, const int edge_num) = 0;
         virtual void diversify_by_cut(IndexOracle const &oracle, const int edge_num) = 0;
