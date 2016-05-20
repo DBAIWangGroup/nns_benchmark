@@ -86,10 +86,8 @@ Prerequisites.
 - Currently the program has only been tested on Linux.
 - The users need to have Boost C++ library installed (http://www.boost.org/). The Boost library is used to calculate the quantile of chi-squared distribution.
 
-- Sample data (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
+- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
 
-
-* Currently the program has only been tested on Linux.
 
 How to use SRS
 --------------
