@@ -33,19 +33,21 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake
+CMAKE_COMMAND = cmake 
+
 
 # The command to remove a file.
-RM = /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E remove -f
+# RM = /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E remove -f
+RM = cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yzhang4/HD/release/algorithms/NonMetricSpaceLib/code
+CMAKE_SOURCE_DIR = "../code" 
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yzhang4/HD/release/algorithms/NonMetricSpaceLib/code
+CMAKE_BINARY_DIR = "../code"
 
 #=============================================================================
 # Targets provided globally by CMake.
