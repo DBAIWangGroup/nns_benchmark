@@ -9,7 +9,7 @@ We disabled SIMD and multi-threading techniques. We also replace the compiler op
 
 ##Prerequisites:
 
-- A modern compiler that supports C++11: G++ 4.7, Intel compiler 14, Clang 3.4.
+- A modern compiler that supports C++11, and G++ 4.7. 
 - Boost (dev version).
 - CMake (version 2.8 or over is needed).
 - Eigen (dev version version 3.0 or over is needed).
