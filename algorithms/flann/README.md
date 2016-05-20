@@ -10,8 +10,11 @@ We disabled the improved version of the distance computation and only use a sing
 ##Prerequisites:
 
 - A modern compiler that supports C++11 and G++ 4.7
+
 - CMake (version 2.6 or over is required)
-- HDF5 should be installed. 
+
+- HDF5 should be installed. [HDF5](https://www.hdfgroup.org/HDF5/) is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.
+
 - [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query points and ground truth results. Note that the input format is .hdf5 and all data files downloaded should be put to the knn_benchmark/data directory.
 
 ##Compile 
