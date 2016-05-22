@@ -7,8 +7,7 @@ Diversified Proximity Graph (**DPG**) is an extension of [**KGraph**](http://www
 - A modern compiler that supports `C++11` (e.g., `gcc 4.7` and above)
 - A linux system 
 - The `boost` library (dev version) installed. Note that we need to set the **paths** of the Boost installed in **Makefile**.
--
-  [A sample dataset](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data)
+- [A sample dataset](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data)
   (e.g., audio) is downloaded, including its data points, query points and
   ground truth results. Note that we need to change data format later. All data
   files downloaded should be put in the `./knn_benchmark/data` directory.
