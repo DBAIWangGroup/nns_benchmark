@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="srs---fast-approximate-nearest-neighbor-search-in-high-dimensional-euclidean-space-with-a-tiny-index">SRS - Fast Approximate Nearest Neighbor Search in High Dimensional Euclidean Space With a Tiny Index</h1>
+<p>Please refer to our <a href="https://github.com/DBWangGroupUNSW/SRS">GitHub reposit</a> for more details.</p>
+<h2 id="prerequisites.">Prerequisites.</h2>
+<ul>
+<li>A modern compiler that supports <code>C++11</code> (e.g., <code>gcc 4.7</code> and above)</li>
+<li>A linux system</li>
+<li>The users need to have Boost C++ library installed (http://www.boost.org/). The Boost library is used to calculate the quantile of chi-squared distribution.</li>
+<li><a href="https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data">A sample data</a> (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the <code>./knn_benchmark/data</code> directory.</li>
+</ul>
+<h2 id="how-to-use-srs">How to use SRS</h2>
+<ol style="list-style-type: decimal">
+<li>Compile the program (SRS/src)</li>
+</ol>
+<pre><code>% make all</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Build Index (SRS/script)</li>
+</ol>
+<pre><code>% build.sh</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Conduct search (SRS/script)</li>
+</ol>
+<pre><code>% search.sh</code></pre>
+<h2 id="data-format">Data Format</h2>
+<ol style="list-style-type: decimal">
+<li>Data file should contain <em>n</em> lines, where <em>n</em> is the cardinality of the dataset. The file should be formatted as:</li>
+</ol>
+<pre><code>e_1_1 e_1_2 ... e_1_d
+...
+e_n_1 e_n_2 ... e_n_d</code></pre>
+<p>where <code>e_i_j</code>s are integers, and are separated by whitespace.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Query file should contain <em>N+1</em> lines, where <em>N</em> is the number of queries in the query workload. The file should be formatted as:</li>
+</ol>
+<pre><code>N d
+ID_1 e_1_1 e_1_2 ... e_1_d
+...
+ID_N e_N_1 e_N_2 ... e_N_d</code></pre>
+<p>where <em>d</em> is the dimensionality, <code>e_i_j</code> is an integer, and separated by whitespace.</p>
+</body>
+</html>

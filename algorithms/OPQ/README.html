@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="optimized-product-quantization">Optimized Product Quantization</h1>
+<p>This is a combination of source codes of OPQ and Inverted MultiIndex. In our impementation, we use the inverted multi-indexing technique to perform non-exhaustive search for OPQ. The original code of OPQ is implemented by MATLAB, which is used to transform the data vectors and query vectors for finding the minimal quantization distortion.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><code>Yael</code> and <code>VLFeat</code> libraries (for the Matlab code)</li>
+<li>A modern compiler that supports <code>C++11</code> (e.g., <code>gcc 4.7</code> and above)</li>
+<li>Matlab</li>
+<li>CMake (version 2.6 or over)</li>
+<li>The <code>boost</code> library (dev version) installed.</li>
+<li>IntelMKL</li>
+</ul>
+<h2 id="compile">Compile</h2>
+<p>To compile, go to src directory and type</p>
+<pre><code>sh ./build_debug.sh or ./build_release.sh</code></pre>
+<p>Note that the local directory of Boost and IntelMKL should be provided (<code>CMakeLists.txt</code>).</p>
+<h2 id="index">Index</h2>
+<p>To get OPQ indexing, one should first enter the <code>Transform_Data</code> folder and run</p>
+<pre><code>main.m</code></pre>
+<p>file to get the transformed data vectors and query vectors, coarse vocabularies and fine vocabularies. Note that the directory of Yael and vlfeat library should be given. Then go to OPQ/script directory and run</p>
+<pre><code>./indexer.sh </code></pre>
+<p>to obtain the OPQ index.</p>
+<h2 id="search">Search</h2>
+<pre><code>./search.sh</code></pre>
+<p>Note that, in our experiment paper, we tune the <code>c</code> value of OPQ search (i.e., size of neighbors to be visited) to achieve the trade-off between search speed and search quality (recall). The search performance (time and recall) results are kept in the <code>OPQ/results</code> directory.</p>
+</body>
+</html>

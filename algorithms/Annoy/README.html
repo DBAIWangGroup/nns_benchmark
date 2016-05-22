@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="annoy">Annoy</h1>
+<p>Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for approximate nearest neighbor search with L2 or angular distance. The version here is based on Annoy's source code obtained on 5 April 2016. Please refer to <a href="https://github.com/spotify/annoy"><strong>Annoy</strong> at GitHub</a> for more details.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>linux system</li>
+<li>A <a href="https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data">sample data</a> (e.g., audio) has been downloaded, which includes its data points, query points, and ground truth results. Note that we need to change data format later. All data files downloaded should be put in the <code>./knn_benchmark/data</code> directory.</li>
+</ul>
+<h2 id="compile-annoysrc">Compile (Annoy/src)</h2>
+<p>build the Annoy trees construction and Annoy search programs.</p>
+<pre><code>make</code></pre>
+<h2 id="construct-annoy-trees-and-conduct-search-dpgscript">Construct Annoy trees and conduct search (DPG/script)</h2>
+<pre><code>run.sh</code></pre>
+<p>Note that, in our experiment paper, we vary the number of data points explored to achieve the trade-off between search speed and search quality (recall). This is exactly the same with KGraph.</p>
+</body>
+</html>

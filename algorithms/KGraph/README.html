@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="kgraph">KGraph</h1>
+<p>This is a modified version of <a href="http://www.kgraph.org"><strong>KGraph</strong></a> from the KGraph source code obtained on 5 April 2016. The original version of <strong>KGraph</strong> which is continuously maintained by <a href="https://github.com/aaalgo">Dr. Wei Dong</a>.</p>
+<p>Main differences:</p>
+<ol style="list-style-type: decimal">
+<li><p>We disabled SIMD and multi-threading techniques in <strong>KGraph</strong>. Note the besides the compiler flag, we also comment the SIMD related code in <code>metric.cpp</code></p></li>
+<li><p>We reduce the index size of KGraph by not keeping the distances of the edges, which is not used in the search process.</p></li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A modern compiler that supports <code>C++11</code> (e.g., <code>g++ 4.7</code> and above)</li>
+<li>A Linux System</li>
+<li>The boost library (dev version) installed. Note that we need to set the <strong>paths</strong> of the Boost installed in <strong>Makefile</strong>.</li>
+<li><a href="https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data">A sample data</a> (e.g., audio) is downloaded, including data points, query points and ground truth results. Note that all data files downloaded should be put to the <code>./knn_benchmark/data</code> directory.</li>
+</ul>
+<h2 id="compile-kgraphsrc">Compile (KGraph/src)</h2>
+<p>build the index construction and search programs, namely <code>kgraph_index</code> and <code>kgraph_search</code>.</p>
+<pre><code>build.sh</code></pre>
+<h2 id="construct-k-nn-graph-kgraphscript">Construct K-NN graph (KGraph/script)</h2>
+<p><code>kgraph_index.sh</code></p>
+<p>Build K-NN graphs based on the data points, which is put to its index directory (i.e., <code>./nns_benchmark/index/kgraph</code>). Note that the suffix number of the index file (e.g., <code>kgraph_40</code> of <code>audio.kgraph_40</code>) represents the number of neighbors kept in the K-NN graph.</p>
+<h2 id="search-on-the-k-nn-graph-kgraphscript">Search on the K-NN graph (KGraph/script)</h2>
+<pre><code>kgraph_search.sh</code></pre>
+<p>Note that, in our experiment paper, we use <code>P</code> value of KGraph search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall). The search performance (time and recall) results are kept in the KGraph/results directory.</p>
+</body>
+</html>

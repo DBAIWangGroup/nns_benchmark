@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="datasets-used-in-the-nns-benchmark">Datasets Used in the NNS Benchmark</h1>
+<p>For each dataset (e.g., audio), we have files for data points (e.g., <code>audio_base.lshkit</code>), query points (e.g., <code>audio_query.lshkit</code>) and ground truth files (e.g., <code>audio_groundtruth.lshkit</code>). Five different file formats are used by existing algorithms evaluated, including <a href="http://corpus-texmex.irisa.fr"><em>fvecs</em>,<em>ivecs</em></a>, <a href="http://www.kgraph.org/index.php?n=Main.LshkitFormat"><strong>lshkit</strong></a>, <a href="https://github.com/mariusmuja/flann"><em>hdf5</em></a> and <a href="https://github.com/DBWangGroupUNSW/SRS"><em>txt</em></a> (plain text).</p>
+<p>Please <strong>download</strong> the following compressed dataset as the running sample data used in our examples. Datasets downloaded should be unzipped and located in the <code>./nns_benchmark/data</code> directory.</p>
+<ul>
+<li><a href="https://www.dropbox.com/s/1hhaz08i3qk4ett/audio.zip?dl=0">Audio</a>. Audio contains about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.</li>
+</ul>
+<p>More datasets evaluated in our <a href="http://www.cse.unsw.edu.au/~yingz/NNS.pdf">NNS Experimental Evaluation paper</a> will be uploaded soon.</p>
+<h2 id="deduplication-and-query-set-generation">Deduplication and Query Set Generation</h2>
+<p>In all of our datasets, we <em>have already removed the duplicate data points</em> from the original ones downloaded from the corresponding source websites. For each dataset, by default, we reserved 200 random data points as the query points. The ground truth results are also provided for each dataset.</p>
+</body>
+</html>

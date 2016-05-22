@@ -9,11 +9,11 @@ We disabled SIMD and multi-threading techniques. We also replace the compiler op
 
 ##Prerequisites:
 
-- A modern compiler that supports C++11, and G++ 4.7. 
-- Boost (dev version).
+- A modern compiler that supports `C++11` (e.g., `gcc 4.7` and above)
+- The `boost` library (dev version) installed. 
 - CMake (version 2.8 or over is needed).
 - Eigen (dev version version 3.0 or over is needed).
-- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query point. Note that the input format is .txt and the ground truth results can be generated before evaluating.
+- [A sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query point. Note that the input format is .txt and the ground truth results can be generated before evaluating.
 
 ##Compile (NonMetricSpaceLib/code) 
 

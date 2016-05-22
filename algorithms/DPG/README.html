@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="dpg">DPG</h1>
+<p>Diversified Proximity Graph (<strong>DPG</strong>) is an extension of <a href="http://www.kgraph.org/"><strong>KGraph</strong></a> which maximizes the diversity of the K-NN graph</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A modern compiler that supports <code>C++11</code> (e.g., <code>gcc 4.7</code> and above)</li>
+<li>A linux system</li>
+<li>The <code>boost</code> library (dev version) installed. Note that we need to set the <strong>paths</strong> of the Boost installed in <strong>Makefile</strong>.</li>
+<li><a href="https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data">A sample dataset</a> (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put in the <code>./knn_benchmark/data</code> directory.</li>
+</ul>
+<h2 id="compile-dpgsrc">Compile (DPG/src)</h2>
+<p>The following script builds three program for K-NN graph construction (the same as KGraph), performs graph diversification (resulting in the new DPG index); they are <code>DPG_index</code>, <code>DPG_diverse</code> and <code>DPG_search</code>, respectively.</p>
+<pre><code>build.sh</code></pre>
+<p>Two data conversion programs, <code>fvec2lshkit</code> and <code>lshkit2fvec</code>, are also generated, which are copied to the data directory of the NNS benchmark (i.e, <code>./nns_benchmark/data</code>)</p>
+<h2 id="construct-diversified-proxmity-graph-dpg-dpgscript">Construct Diversified Proxmity Graph (DPG) (DPG/script)</h2>
+<pre><code>build_index.sh</code></pre>
+<p>Build K-NN graphs based on the data points, then diversify the K-NN graph to generate the DPG graph. To save the space, one may directly build a DPG graph by diversifying the K-NN graph constructed by KGraph (i.e., index files uder KGraph/index directory). Note that for a DPG graph with <code>L=20</code> (i.e., 20 neighbors per data point), we need diversify a KGraph index created with <code>L=40</code> (i.e., 40 neighbours per data point) because we only keep half of the neighbors to allow space to include reverse edges. By doing this, the size of DPG is guaranteed to be the same as KGraph in the worse case, and is typically smaller.</p>
+<h2 id="search-on-the-k-nn-graph-dpgscript">Search on the K-NN graph (DPG/script)</h2>
+<pre><code>search.sh</code></pre>
+<p>Note that, in our experiment paper, we tune the <code>P</code> value of DPG search (i.e., search queue size) to achieve the trade-off between search speed and search quality (recall). This is exactly the same with KGraph.</p>
+</body>
+</html>

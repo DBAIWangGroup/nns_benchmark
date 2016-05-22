@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="flann---fast-library-for-approximate-nearest-neighbors">FLANN - Fast Library for Approximate Nearest Neighbors</h1>
+<p>FLANN is a library for performing fast approximate nearest neighbor searches in high dimensional spaces. This is a modified version of Flann. The original version can be found form <a href="http://www.cs.ubc.ca/~mariusm/flann">here</a>. FLANN is written in C++ and contains bindings for the following languages: C, MATLAB and Python. We only evaluate the C++ results.</p>
+<p>Main differences:</p>
+<ul>
+<li>We disabled the improved version of the distance computation and only use a single thread.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites:</h2>
+<ul>
+<li>A modern compiler that supports <code>C++11</code> (e.g., <code>gcc 4.7</code> and above)</li>
+<li>CMake (version 2.6 or over is required)</li>
+<li>HDF5 should be installed. <a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.</li>
+<li><a href="https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data">A sample data</a> (e.g., audio) is downloaded, including data points, query points and ground truth results. Note that the input format is .hdf5 and all data files downloaded should be put to the knn_benchmark/data directory.</li>
+</ul>
+<h2 id="compile-flanncodebuild">Compile (flann/code/build)</h2>
+<p>Enter code/build directory and run</p>
+<pre><code>cmake .. </code></pre>
+<p>then</p>
+<pre><code>make</code></pre>
+<h2 id="build-index-flannscript">Build index (flann/script)</h2>
+<pre><code>build_auto.sh</code></pre>
+<p>Flann will automatically choose hierarchical k-means, randomized K-Tree or linear scan according to its estimation. Alternatively, we can explicitly let Flann to choose hierarchical k-means or randomized K-Tree for indexing.</p>
+<pre><code>build_hkmeans.sh 
+build_kdtree.sh </code></pre>
+<h2 id="search-flannscript">Search (flann/script)</h2>
+<p>Corresponding search algorithms based on different indexing mechanism</p>
+<pre><code>run_auto.sh
+run_hkmeans.sh
+run_kdtree.sh</code></pre>
+<p>Flann also provide linear scan algorithm</p>
+<pre><code>run_linear.sh</code></pre>
+<p>which is used to compute speedup of other NNS algorithms.</p>
+<p>Note that, in our experiment paper, we tune the <code>N</code> value (retrived number of the data points) to achieve the trade-off between search speed and search quality (recall). The search performance (time and recall) results are kept in the <code>Flann/results</code> directory.</p>
+</body>
+</html>

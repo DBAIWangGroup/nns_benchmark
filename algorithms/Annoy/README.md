@@ -12,10 +12,10 @@ April 2016. Please refer to
 
 - linux system 
 - A
-  [sample data collection](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data)
+  [sample data ](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data)
   (e.g., audio) has been downloaded, which includes its data points, query
   points, and ground truth results. Note that we need to change data format
-  later. All data files downloaded should be put the knn_benchmark/data
+  later. All data files downloaded should be put in the `./knn_benchmark/data`
   directory.
 
  
@@ -33,6 +33,7 @@ make
 ```
 run.sh
 ```
+
 Note that, in our experiment paper, we vary the number of data points explored to achieve the trade-off between search speed and search quality (recall). This is exactly the same with KGraph.
 
 
