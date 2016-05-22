@@ -1,13 +1,22 @@
 # Annoy 
 
-Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. Please refer to [**Annoy** at GitHub](https://github.com/spotify/annoy) for more details. 
+Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python
+bindings to search for approximate nearest neighbor search with L2 or angular
+distance. The version here is based on Annoy's source code obtained on 5
+April 2016. Please refer to
+[**Annoy** at GitHub](https://github.com/spotify/annoy) for more details.
 
 
 
 ## Prerequisites
 
 - linux system 
-- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including its data points, query points and ground truth results. Note that we need to change data format later. All data files downloaded should be put the knn_benchmark/data directory.
+- A
+  [sample data collection](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data)
+  (e.g., audio) has been downloaded, which includes its data points, query
+  points, and ground truth results. Note that we need to change data format
+  later. All data files downloaded should be put the knn_benchmark/data
+  directory.
 
  
 ## Compile (Annoy/src)
