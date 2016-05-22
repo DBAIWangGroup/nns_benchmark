@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="nns-benchmark-evaluating-approximate-nearest-neighbor-search-algorithms-in-high-dimensional-euclidean-space">NNS Benchmark: Evaluating Approximate Nearest Neighbor Search Algorithms in High Dimensional Euclidean Space</h1>
+<p>Nearest neighbor search (NNS) is a fundamental and essential operation in applications from many domains, such as databases, machine learning, multimedia, and computer vision. Hundreds of algorithms have been proposed to attack the problem from different perspectives, yet there is no <strong>open</strong> and <strong>comprehensive</strong> comparison. By &quot;comprehensive&quot;, we mean using state-of-the-art algorithms proposed from different research areas, and evaluating them on a diverse range of datasets.</p>
+<p>To aid researchers and practitioners working on or whose work depends on the problem, we setup this benchmark for Nearest Neighbor Search (NNS) based on the Euclidean distance on High Dimensional Data. The benefit is twofold:</p>
+<ul>
+<li>For researchers, it allows one to <strong>easily</strong> compare their new algorithms with state-of-the-art ones and on a diverse set of datasets. The latter is especially important to gain a <strong>complete</strong> picture of the performance of an algorithm.</li>
+<li>For practitioners, it allows one to <strong>easily</strong> understand the performances of different algorithms and their <strong>tradeoffs</strong>. This helps them to choose the best implementation meeting their own goals and constraints.</li>
+</ul>
+<p>We also would like to leverage the entire community to collaboratively build and maintain this benchmark. For example, submitting new algorithms, useful datasets, or offering suggestions or improvements.</p>
+<h2 id="scope">Scope</h2>
+<p>We limit the scope of this benchmark by imposing the following constraints.</p>
+<ul>
+<li><p><strong>Representative and competitive approximate NNS algorithms</strong>. It has been well recognized that the exact NNS algorithms often cannot even outperform even the simple linear scan algorithm when the dimensionality is high. We therefore only consider the approximate solutions. In this benchmark, we consider the state-of-the-art algorithms in several research areas and those from practitioners.</p></li>
+<li><p><strong>No hardware specific optimizations</strong>. Not all the implementations we obtained or implemented have the same level of sophistication in utilizing the hardware specific features to speed up the query processing. To perform a (relatively) fair comparison and gain insight into the real strength and weakness of algorithms, we modified several implementations so that, as far as we are aware, no implementation of algorithm in this benchmark uses multiple threads, multiple CPUs, SIMD instructions, hardware pre-fetching, or GPUs.</p></li>
+<li><p><strong>Dense vectors</strong>. We mainly focus on the case where the input data vectors are dense, i.e., non-zero in most of the dimensions.</p></li>
+<li><p><strong>Support the Euclidian distance</strong>. The Euclidean distance is one of the most widely used measures on high-dimensional datasets. It is also supported by most of the NNS algorithms.</p></li>
+<li><p><strong>Exact kNN as the ground truth</strong>. In some existing works, each data point has a label (typically in classification or clustering applications) and the labels are regarded as the ground truth when evaluating the recall of approximate NN algorithms. In our benchmark, we use the exact kNN points as the ground truth as this works for all datasets and majority of the applications.</p></li>
+</ul>
+<p>Currently, we evaluate <strong>15 representative NNS algorithms</strong> on <strong>20 datasets</strong> where details are reported in our <a href="http://www.cse.unsw.edu.au/~yingz/NNS.pdf">Nearest Neighbor Search (NNS) Experimental Evaluation Paper</a>[1].</p>
+<h2 id="algorithms-evaluted">Algorithms Evaluted</h2>
+<p>Thanks to the original authors, all the algorithms considered in this benchmark have their sources publicly available. Algorithms are implemented in C++ unless otherwise specified. We carefully go through all the implementations and make necessary modifications to for fair comparisons. For instance, we re-implement the search process of some algorithms in C++. We also disable the multi-threads, SIMD instructions, fast-math, and hardware prefetching technique.</p>
+<p>Below are brief introuductions of the algorithms evaluated in the benchmark as well as our revisions, which are grouped into three/four categories.</p>
+<h3 id="locality-sensitive-hashing-lsh-based-methods">1. Locality Sensitive Hashing (LSH)-Based Methods</h3>
+<ul>
+<li><p><strong>QALSH</strong> Query-Aware LSH ([2], PVLDB’15). <a href="http://ss.sysu.edu.cn/~fjl/qalsh/qalsh_1.1.2.tar.gz">Originial source code</a></p></li>
+<li><p><strong>SRS</strong> ([3], PVLDB’14). <a href="https://github.com/DBWangGroupUNSW/SRS">Originial source code</a>. Note that both external memory and in-memory versions of <strong>SRS</strong> are available.</p></li>
+</ul>
+<h3 id="space-partitioning-based-methods">2. Space Partitioning-based Methods</h3>
+<h4 id="encoding-based-space-partitioning-methods">2.1. Encoding-Based Space Partitioning Methods</h4>
+<ul>
+<li><strong>SGH</strong> Scalable Graph Hashing ([4], IJCAI’15). <a href="http://cs.nju.edu.cn/lwj">Originial source code</a>.
+<ul>
+<li>Source codes (index construction and search) are implemented by MATLAB.</li>
+<li>In our implementation, we use the hierarchical clustering trees in <strong>FLANN</strong> (C++) to index the resulting binary vectors to support more efficient search.</li>
+</ul></li>
+<li><strong>AGH</strong> Anchor Graph Hashing ([5], ICML’11). <a href="http://www.ee.columbia.edu/ln/dvmm/downloads">Originial source code</a>
+<ul>
+<li>Source codes (index construction and search) are implemented by MATLAB.</li>
+<li>In our implementation, we use the hierarchical clustering trees in <strong>FLANN</strong> (C++) to index the resulting binary vectors to support more efficient search.</li>
+</ul></li>
+<li><strong>NSG</strong> Neighbor-Sensitive Hashing ([6], PVLDB’15). <a href="https://github.com/pyongjoo/nsh">Originial source code</a>
+<ul>
+<li>Source codes (index construction and search) are implemented by MATLAB.</li>
+<li>In our implementation, we use the hierarchical clustering trees in <strong>FLANN</strong> (C++) to index the resulting binary vectors to support more efficient search.</li>
+</ul></li>
+<li><p><strong>SH</strong> Selective Hashing ([7], KDD’15). <a href="http://www.comp.nus.edu.sg/~dsh/download.html">Originial source code</a>. Note that we have confirmed with the authors that the source code released implements the algorithm in their KDD'15 paper, not that in their previous SIGMOD'14 paper.</p></li>
+<li><p><strong>OPQ</strong> Optimal Product Quantization ([8], TPAMI’14). <a href="http://research.microsoft.com/en-us/um/people/kahe">Originial source code</a>. Note that, in our impementation, we use the <a href="http://arbabenko.github.io/MultiIndex/index.html">inverted multi-indexing technique</a> [17] to perform non-exhaustive search for <strong>OPQ</strong>.</p></li>
+<li><strong>NAPP</strong> Neighborhood APProximation index ([9], PVLDB’15). <a href="https://github.com/searchivarius/nmslib">Originial source code</a>
+<ul>
+<li>We disable the SIMD, multi-threading, and <code>-Ofast</code> compiler option.</li>
+</ul></li>
+</ul>
+<h4 id="tree-based-space-partitioning-methods">2.2. Tree-Based Space Partitioning Methods</h4>
+<ul>
+<li><strong>FLANN</strong> ([10], TPAMI’14). <a href="http://www.cs.ubc.ca/research/flann">Originial source code</a>
+<ul>
+<li>We disable the multi-threading techniques in <strong>FLANN</strong>.</li>
+</ul></li>
+<li><strong>Annoy</strong> ([11]). <a href="https://github.com/spotify/annoy">Originial source code</a>
+<ul>
+<li>Source codes are implemented by C++ (core algorithms) and Python (for binding). We re-implemente the Python binding part with C++.</li>
+<li>We disable <code>-ffast-math</code> compiler option in <strong>Annoy</strong>.</li>
+</ul></li>
+<li><strong>VP-Tree</strong> Vantage-Point tree ([12], NIPS’13). <a href="https://github.com/searchivarius/nmslib">Originial source code</a>
+<ul>
+<li>We disable the SIMD, multi-threading, and <code>-Ofast</code> compiler option.</li>
+</ul></li>
+</ul>
+<h3 id="neighborhood-based-methods">3. Neighborhood-Based Methods</h3>
+<ul>
+<li><strong>SW</strong> Small World Graph ([13], IS'14). <a href="https://github.com/searchivarius/nmslib">Originial source code</a>
+<ul>
+<li>We disable the SIMD, multi-threading, and <code>-Ofast</code> compiler option.</li>
+</ul></li>
+<li><p><strong>RCT</strong> Rank Cover Tree ([14], TPAMI'15). Originial source code is obtained from authors by email, who kindly allow us to release them through this benchmark.</p></li>
+<li><strong>KGraph</strong> ([15] [16], WWW'11). <a href="https://github.com/aaalgo/kgraph">Originial source code</a></li>
+<li>We disable SIMD and multi-threading techniques in <strong>KGraph</strong>. Note the besides the compiler flag, we also comment out the SIMD related code in <code>metric.cpp</code></li>
+<li><p>We reduce the index size of KGraph by discarding the distances of the edges, which is not used in the search process anyway.</p></li>
+<li><p><strong>DPG</strong> Diversified Proximity Graph ([1]). <a href="https://github.com/DBWangGroupUNSW/nns_benchmark/algorithms/DPG">Originial source code</a> We engineered a new algorithm, DPG, that constructs an alternative neighborhood graph index, yet uses the same search algorithm as the KGraph. DPG is more robust than KGraph across different datasets. For more details about the algorithm and its analysis, please refer to our <a href="http://www.cse.unsw.edu.au/~yingz/NNS.pdf">NNS Experimental Evaluation Paper</a>[1].</p></li>
+</ul>
+<h2 id="datasets-used">Datasets Used</h2>
+<p>Currently, we use</p>
+<ul>
+<li><strong>18 real datasets</strong> that are used by existing work and cover a wide range of application and data types, including image, audio, video, text, and deep-learning data.</li>
+<li><strong>2 sythetic datasets</strong>: Rand (for Random) and Gauss (for mixed Gaussian).</li>
+</ul>
+<p>Table 1 summarizes the characteristics of the datasets including the number of data points (<em>n</em>), dimensionality (<em>d</em>), Relative Contrast (<em>RC</em> [18]), local intrinsic dimensionality (<em>LID</em> [19]), and data type, where RC and LID are used to describe the hardness of the datasets.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Name</strong></th>
+<th><strong>n X 10^3</strong></th>
+<th><strong>d</strong></th>
+<th><strong>RC</strong></th>
+<th><strong>LID</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nus*</td>
+<td>269</td>
+<td>500</td>
+<td>1.67</td>
+<td>24.5</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Gist*</td>
+<td>983</td>
+<td>960</td>
+<td>1.94</td>
+<td>18.9</td>
+<td>Image</td>
+</tr>
+<tr class="odd">
+<td>Rand*</td>
+<td>1,000</td>
+<td>100</td>
+<td>3.05</td>
+<td>58.7</td>
+<td>Synthetic</td>
+</tr>
+<tr class="even">
+<td>Glove*</td>
+<td>1,192</td>
+<td>100</td>
+<td>1.82</td>
+<td>20.0</td>
+<td>Text</td>
+</tr>
+<tr class="odd">
+<td>Cifa</td>
+<td>50</td>
+<td>512</td>
+<td>1.97</td>
+<td>9.0</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Audio</td>
+<td>53</td>
+<td>192</td>
+<td>2.97</td>
+<td>5.6</td>
+<td>Audio</td>
+</tr>
+<tr class="odd">
+<td>Mnist</td>
+<td>69</td>
+<td>784</td>
+<td>2.38</td>
+<td>6.5</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Sun</td>
+<td>79</td>
+<td>512</td>
+<td>1.94</td>
+<td>9.9</td>
+<td>Image</td>
+</tr>
+<tr class="odd">
+<td>Enron</td>
+<td>95</td>
+<td>1,369</td>
+<td>6.39</td>
+<td>11.7</td>
+<td>Text</td>
+</tr>
+<tr class="even">
+<td>Trevi</td>
+<td>100</td>
+<td>4,096</td>
+<td>2.95</td>
+<td>9.2</td>
+<td>Image</td>
+</tr>
+<tr class="odd">
+<td>Notre</td>
+<td>333</td>
+<td>128</td>
+<td>3.22</td>
+<td>9.0</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Yout</td>
+<td>346</td>
+<td>1,770</td>
+<td>2.29</td>
+<td>12.6</td>
+<td>Video</td>
+</tr>
+<tr class="odd">
+<td>Msong</td>
+<td>922</td>
+<td>420</td>
+<td>3.81</td>
+<td>9.5</td>
+<td>Audio</td>
+</tr>
+<tr class="even">
+<td>Sift</td>
+<td>994</td>
+<td>128</td>
+<td>3.50</td>
+<td>9.3</td>
+<td>Image</td>
+</tr>
+<tr class="odd">
+<td>Deep</td>
+<td>1,000</td>
+<td>128</td>
+<td>1.96</td>
+<td>12.1</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Ben</td>
+<td>1,098</td>
+<td>128</td>
+<td>1.96</td>
+<td>8.3</td>
+<td>Image</td>
+</tr>
+<tr class="odd">
+<td>Imag</td>
+<td>2,340</td>
+<td>150</td>
+<td>2.54</td>
+<td>11.6</td>
+<td>Image</td>
+</tr>
+<tr class="even">
+<td>Gauss</td>
+<td>2,000</td>
+<td>512</td>
+<td>3.36</td>
+<td>19.6</td>
+<td>Synthetic</td>
+</tr>
+<tr class="odd">
+<td>UQ-V</td>
+<td>3,038</td>
+<td>256</td>
+<td>8.39</td>
+<td>7.2</td>
+<td>Video</td>
+</tr>
+<tr class="even">
+<td>BANN</td>
+<td>10,000</td>
+<td>128</td>
+<td>2.60</td>
+<td>10.3</td>
+<td>Image</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1: Dataset Summary</strong></p>
+<p>We mark the first four datasets in Table 1 with asterisks to indicate that they are <strong>hard datasets</strong> compared with others.</p>
+<p>Below, we give more descriptions of these datasets.</p>
+<ul>
+<li><p><a href="http://corpus-texmex.irisa.fr"><strong>Sift</strong></a> consists of 1 million 128-d SIFT vectors.</p></li>
+<li><p><a href="http://lms.comp.nus.edu.sg/research/NUS-WIDE.htm"><strong>Nusw</strong></a> includes around <span class="math inline">\(2.7\)</span> million web images, each as a 500-dimensional bag-of-words vector.</p></li>
+<li><p><a href="http://www.ifs.tuwien.ac.at/mir/msd/download.html"><strong>Msong</strong></a> is a collection of audio features and metadata for a million contemporary popular music tracks with <span class="math inline">\(420\)</span> dimensions.</p></li>
+<li><p><a href=""><strong>Gist</strong></a> is is an image dataset which contains about 1 million data points with 960 dimensions.</p></li>
+<li><p><a href="https://yadi.sk/d/I_yaFVqchJmoc"><strong>Deep</strong></a> contains deep neural codes of natural images obtained from the activations of a convolutional neural network, which contains about 1 million data points with 256 dimensions.</p></li>
+<li><p><a href="http://corpus-texmex.irisa.fr/"><strong>Bann</strong></a> is used to evaluate the scalability of the algorithms, where 1M, 2M, 4M, 6M, 8M, and 10M data points are sampled from 128-dimensional SIFT descriptors extracted from natural images.</p></li>
+<li><p><strong>Guass</strong> is generated by randomly choosing <span class="math inline">\(1000\)</span> cluster centers with in space <span class="math inline">\([0,10]^512\)</span>, and each cluster follows the a Gaussian distribution with deviation 1 on each dimension.</p></li>
+<li><p><strong>Random</strong> contains <span class="math inline">\(1\)</span>M randomly chosen points in a unit hypersphere with dimensionality 100.</p></li>
+<li><p><a href="http://www.cs.princeton.edu/cass/audio.tar.gz"><strong>Audio</strong></a> has about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.</p></li>
+<li><p><a href="http://www.cs.toronto.edu/~kriz/cifar.html"><strong>Cifar</strong></a> is a labeled subset of <em>TinyImage</em> dataset, which consists of 60000 32 X color images in 10 classes, with each image represented by a 512-d GIST feature vector.</p></li>
+<li><p><a href="http://www.cs.cmu.edu/~enron"><strong>Enron</strong></a> origins from a collection of emails. Yifang et. al. extract bi-grams and form feature vectors of 1369 dimensions.</p></li>
+<li><p><a href="http://nlp.stanford.edu/projects/glove"><strong>Glove</strong></a> contains 1.2 million 100-d word feature vectors extracted from Tweets.</p></li>
+<li><p><a href="http://cloudcv.org/objdetect"><strong>Imag</strong></a> is introduced and employed by <a href="http://www.image-net.org/challenges/LSVRC/">The ImageNet Large Scale Visual Recognition Challenge (ILSVRC)</a>, which contains about 2.4 million data points with 150-d dense SIFT features.</p></li>
+<li><p><a href="http://yann.lecun.com/exdb/mnist"><strong>Mnist</strong></a> consists of 70k images of hand-written digits, each as a 784-d vector concatenating all pixels. we randomly sample 1k as the queries and use the remaining as the data base.</p></li>
+<li><p><a href="http://groups.csail.mit.edu/vision/SUN"><strong>Sun</strong></a> contains about 0.08 million 512-d GIST features of images.</p></li>
+<li><p><a href="http://phototour.cs.washington.edu/datasets"><strong>Notre</strong></a> contains about 0.3 million 128-d features of a set of Flickr images and a reconstruction.</p></li>
+<li><p><a href="http://vis.uky.edu/~stewe/ukbench"><strong>UKbench</strong></a> contains about 1 million 128-d features of images.</p></li>
+<li><p><a href="http://phototour.cs.washington.edu/patches/default.htm"><strong>Trevi</strong></a> consists of 0.4 million X 1024 bitmap(.bmp) images, each containing a <code>16 X 16</code> array of image patch. Each patch is sampled as <code>64 X 64</code> grayscale, with a canonical scale and orientation. Therefore, Trevi patch dataset consists of around 100,000 4096-d vectors.</p></li>
+<li><p><a href=""><strong>UQ_V</strong></a> is a video dataset. A local feature based on some keyframes are extracted which include 256 dimensions.</p></li>
+<li><p><a href="http://www.cs.tau.ac.il/~wolf/ytfaces/index.html"><strong>Yout</strong></a> contains 3,425 videos of 1,595 different people. All the videos were downloaded from YouTube. An average of 2.15 videos are available for each subject. The shortest clip duration is 48 frames, the longest clip is 6,070 frames, and the average length of a video clip is 181.3 frames.</p></li>
+</ul>
+<h2 id="performance-evaluation-and-analyses">PERFORMANCE EVALUATION and ANALYSES</h2>
+<p>Please refer to our <a href="http://www.cse.unsw.edu.au/~yingz/NNS.pdf">NNS Experimental Evaluation paper</a>[1].</p>
+<h2 id="references">REFERENCES</h2>
+<p>[1] W. Li, Y. Zhang, Y. Sun, W. Wang, W. Zhang, X. Lin, <em>Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement</em>. <a href="http://www.cse.unsw.edu.au/~yingz/NNS.pdf">Full Version</a></p>
+<p>[2] Q. Huang, J. Feng, Y. Zhang, Q. Fang, and W. Ng. <em>Query-aware locality-sensitive hashing for approximate nearest neighbor search</em>. PVLDB, 9(1):1–12, 2015.</p>
+<p>[3] Y. Sun, W. Wang, J. Qin, Y. Zhang, and X. Lin. <em>SRS: solving c-approximate nearest neighbor queries in high dimensional euclidean space with a tiny index</em>. PVLDB,8(1):1–12, 2014</p>
+<p>[4] Q. Jiang and W. Li. <em>Scalable graph hashing with feature transformation</em>. In IJCAI, pages 2248–2254, 2015.</p>
+<p>[5] W. Liu, J. Wang, S. Kumar, and S. Chang. <em>Hashing with graphs</em>. In ICML, pages 1–8, 2011.</p>
+<p>[6] Y. Park, M. J. Cafarella, and B. Mozafari. <em>Neighbor-sensitive hashing</em>. In PVLDB, 9(3):144–155, 2015.</p>
+<p>[7] J. Gao, H. V. Jagadish, B. C. Ooi, and S. Wang. <em>Selective hashing: Closing the gap between radius search and k-nn search</em>. In SIGKDD, 2015.</p>
+<p>[8] T. Ge, K. He, Q. Ke, and J. Sun. <em>Optimized product quantization</em>. IEEE Trans. Pattern Anal. Mach. Intell., 36(4):744–755, 2014.</p>
+<p>[9] B. Naidan, L. Boytsov, and E. Nyberg. <em>Permutation search methods are efficient, yet faster search is possible</em>. PVLDB, 8(12):1618–1629, 2015.</p>
+<p>[10] M. Muja and D. G. Lowe. <em>Scalable nearest neighbor algorithms for high dimensional data</em>. IEEE Trans. Pattern Anal. Mach. Intell., 36(11):2227–2240, 2014.</p>
+<p>[11] E. Bernhardsson. <a href="https://github.com/spotify/annoy"><em>Annoy at github</em></a>.</p>
+<p>[12] L. Boytsov and B. Naidan. <em>Learning to prune in metric and non-metric spaces</em>. In NIPS, 2013.</p>
+<p>[13] Y. Malkov, A. Ponomarenko, A. Logvinov, and V. Krylov. <em>Approximate nearest neighbor algorithm based on navigable small world graphs</em>. Inf. Syst., 45:61–68, 2014</p>
+<p>[14] M. E. Houle and M. Nett. <em>Rank-based similarity search: Reducing the dimensional dependence</em>. IEEE TPAMI, 37(1):136–150, 2015.</p>
+<p>[15] W. Dong. <a href="http://www.kgraph.org"><em>Kgraph website</em></a>.</p>
+<p>[16] W. Dong, M. Charikar, and K. Li. <em>Efficient k-nearest neighbor graph construction for generic similarity measures</em>. In WWW, 2011.</p>
+<p>[17] A. Babenko and V. S. Lempitsky. <em>The inverted multi-index</em>. In CVPR, pages 3069–3076, 2012.</p>
+<p>[18] J. He, S. Kumar, and S. Chang. <em>On the difficulty of nearest neighbor search</em>. In ICML, 2012.</p>
+<p>[19] L. Amsaleg, O. Chelly, T. Furon, S. Girard, M. E. Houle, K. Kawarabayashi, and M. Nett. <em>Estimating local intrinsic dimensionality</em>. In SIGKDD, 2015.</p>
+</body>
+</html>
