@@ -1,6 +1,6 @@
 # Datasets Used in the NNS Benchmark
 
-For each dataset (e.g., audio), we have files for data points (e.g., `audio_base.lshkit`), query points (e.g., `audio_query.lshkit`) and ground truth files (e.g., `audio_groundtruth.lshkit`). Five different file formats are used by existing algorithms evaluated, including [*fvecs*,*ivecs*](http://corpus-texmex.irisa.fr), [**lshkit**](http://www.kgraph.org/index.php?n=Main.LshkitFormat), [*hdf5*](https://github.com/mariusmuja/flann) and [*txt*](https://github.com/DBWangGroupUNSW/SRS) (plain text).
+For each dataset (e.g., audio), we have files for data points (e.g., `audio_base.lshkit`), query points (e.g., `audio_query.lshkit`) and ground truth files (e.g., `audio_groundtruth.lshkit`). Five different file formats are used by existing algorithms evaluated, including [*fvecs*,*ivecs*](http://corpus-texmex.irisa.fr), [*lshkit*](http://www.kgraph.org/index.php?n=Main.LshkitFormat), [*hdf5*](https://github.com/mariusmuja/flann) and [*txt*](https://github.com/DBWangGroupUNSW/SRS) (plain text).
 
 Please **download** the following compressed dataset as the running sample data used in our examples. Datasets downloaded should be unzipped and located in the `./nns_benchmark/data` directory.
 
