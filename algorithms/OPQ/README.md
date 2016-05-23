@@ -29,9 +29,7 @@ To get OPQ indexing, one should first enter the `Transform_Data` folder and run
 ```
 main.m 
 ```
-in the Matlab.    
-
-file to get the transformed data vectors and query vectors, coarse vocabularies and fine vocabularies.
+in the Matlab to get the transformed data vectors and query vectors, coarse vocabularies and fine vocabularies.
 Note that the directories of `Yael` and `vlfeat` libraries should be given in the main.m file. 
 
 Then go to OPQ/script directory and run  
