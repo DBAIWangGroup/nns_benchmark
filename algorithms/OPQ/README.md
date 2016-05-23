@@ -12,35 +12,38 @@ For the search efficiency,  we apply the [inverted multi-indexing technique](htt
 - The `boost` library (dev version) installed.
 - IntelMKL
 
-##Compile
+##Compile (OPQ/src)
 
 To compile, go to src directory and type 
 
 ```
-sh ./build_debug.sh or ./build_release.sh
+./build_release.sh
 ```
 
 Note that the local directory of Boost and IntelMKL should be provided (`CMakeLists.txt`).
 
-##Index
+##Index (OPQ/Transform_Data and OPQ/script)
 
 To get OPQ indexing, one should first enter the `Transform_Data` folder and run 
 
 ```
-main.m
+main.m 
 ```
+in the Matlab.    
 
 file to get the transformed data vectors and query vectors, coarse vocabularies
 and fine vocabularies. Note that the directory of Yael and vlfeat library should
-be given. Then go to OPQ/script directory and run  
+be given in the main.m file. 
+
+Then go to OPQ/script directory and run  
 
 ```
 ./indexer.sh 
 ```
 
-to obtain the OPQ index.
+to build the OPQ index.
 
-##Search 
+##Search (OPQ/script) 
 
 ```
 ./search.sh
