@@ -1,6 +1,7 @@
 # Optimized Product Quantization
 
-This is a combination of source codes of OPQ and Inverted MultiIndex. In our impementation, we use the inverted multi-indexing technique to perform non-exhaustive search for OPQ. The original code of OPQ is implemented by MATLAB, which is used to transform the data vectors and query vectors for finding the minimal quantization distortion. 
+This is a combination of source codes of OPQ and Inverted MultiIndex. In our impementation, we use the inverted multi-indexing technique to perform non-exhaustive search for OPQ. [The original code of OPQ](http://kaiminghe.com/cvpr13/index.html) is implemented by MATLAB, which is used to transform the data vectors and query vectors for finding the minimal quantization distortion. 
+For the search efficiency,  we apply the [inverted multi-indexing technique](http://arbabenko.github.io/MultiIndex/index.html) implemented by C++ to perform non-exhaustive search. 
 
 ##Prerequisites
 
