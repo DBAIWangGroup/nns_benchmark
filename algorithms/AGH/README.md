@@ -7,17 +7,19 @@ We use the original code to generate the hashcodes of the data points and transf
 ## Compile (AGH/src)
 
 To compile AGH, go to AGH/src and run 
+
 ```
 make
 ```
+
 to get the executable file.
 
 ## Index (AGH/preprocess)
 
 To build the index of AGH, enter into preprocess folder and run 
-``
+```
 main.m
-``
+```
 in MATLAB to get the transformed data and transformation parameters.
 Alternatively, one may run 
 ```
