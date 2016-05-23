@@ -1,7 +1,7 @@
 QALSH
 ====================================================================================================
 
-is a package written in the C++ programming language. It provides a randomized access method for the c-Approximate Nearest Neighbor (or simply c-ANN) search in the high dimensional Euclidean space, where c is an approximation ratio. QALSH is based on the [Query-Aware Locality-Sensitive Hashing](www.vldb.org/pvldb/vol9/p1-huang.pdf) scheme.
+is a package written in the C++ programming language. It provides a randomized access method for the c-Approximate Nearest Neighbor (or simply c-ANN) search in the high dimensional Euclidean space, where c is an approximation ratio. QALSH is based on the [Query-Aware Locality-Sensitive Hashing](http://www.vldb.org/pvldb/vol9/p1-huang.pdf) scheme.
 
 Prerequisites.
 ------------------
