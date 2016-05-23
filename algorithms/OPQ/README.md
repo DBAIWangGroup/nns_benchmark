@@ -20,7 +20,7 @@ To compile, go to src directory and type
 ./build_release.sh
 ```
 
-Note that the local directory of Boost and IntelMKL should be provided (`CMakeLists.txt`).
+Note that the local directory of `Boost` and `IntelMKL` should be provided (`CMakeLists.txt`).
 
 ##Index (OPQ/Transform_Data and OPQ/script)
 
@@ -31,9 +31,8 @@ main.m
 ```
 in the Matlab.    
 
-file to get the transformed data vectors and query vectors, coarse vocabularies
-and fine vocabularies. Note that the directory of Yael and vlfeat library should
-be given in the main.m file. 
+file to get the transformed data vectors and query vectors, coarse vocabularies and fine vocabularies.
+Note that the directories of `Yael` and `vlfeat` libraries should be given in the main.m file. 
 
 Then go to OPQ/script directory and run  
 
