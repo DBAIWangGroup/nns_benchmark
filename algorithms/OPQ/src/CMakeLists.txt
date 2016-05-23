@@ -14,8 +14,8 @@ cmake_minimum_required(VERSION 3.2)
 find_package(Boost 1.58.0 COMPONENTS program_options serialization system filesystem thread REQUIRED)
 
 IF (UNIX)
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -DMKL_ILP64 -m64")
-	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -DMKL_ILP64 -m64")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fopenmp -DMKL_ILP64 -m64")
+	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -fopenmp -DMKL_ILP64 -m64")
 ENDIF (UNIX)
 
 IF (NOT DEFINED CMAKE_CURRENT_LIST_DIR)
