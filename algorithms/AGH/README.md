@@ -7,25 +7,31 @@ We use the original code to generate the hashcodes of the data points and transf
 ## Compile (AGH/src)
 
 To compile AGH, go to AGH/src and run 
-
+```
 make
-
+```
 to get the executable file.
 
 ## Index (AGH/preprocess)
 
 To build the index of AGH, enter into preprocess folder and run 
-
+``
 main.m
+``
+in MATLAB to get the transformed data and transformation parameters.
+Alternatively, one may run 
+```
+matlab -nodisplay -nojvm -nosplash -nodesktop -r "try, run('main.m'), end, exit(0)"
+``` 
 
-in MATLAB to get the transformed data and transformation parameters. Note that main.m will build the index for 1-AGH and 2-AGH. One could restrict to generate only one of them.
+Note that main.m will build the index for 1-AGH and 2-AGH. One could choose to generate only one of them.
 
 ## Search (AGH/script)
 
 go to AGH/script and run 
-
+```
 searcher.sh 
-
+```
 to obtain the searching performance of AGH. We use c value (e.g. the number of the visited points) to  achieve the trade-off between search speed and search quality (recall).
 
 
