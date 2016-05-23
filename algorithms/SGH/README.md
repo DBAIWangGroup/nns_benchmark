@@ -12,7 +12,7 @@ make
 ```
 to get the executable file 'SGH'.
 
-## Index
+## Index (SGH/preprocess)
 
 To build the index of SGH, enter into preprocess folder and run 
 ```
@@ -23,9 +23,9 @@ in MATLAB to get the transformed data and transformation parameters. Alternative
 matlab -nodisplay -nojvm -nosplash -nodesktop -r "try, run('main.m'), end, exit(0)"
 ```
 
-## Search 
+## Search (SGH/script) 
 
-go to SGH/src and run 
+go to SGH/script and run 
 ```
 searcher.sh 
 ```
