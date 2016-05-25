@@ -1,6 +1,6 @@
 # SH - Selective Hashing 
 
-[Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). 
+[Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html) implemented by C++. 
 
 ## Prerequisites
 
@@ -13,7 +13,6 @@ To compile AGH, go to AGH/src and run
 ```
 build.sh
 ```
-
 to get the executable file SH.
 
 Note that to handle other dataset, we need to modify the dimensionality and the datasize in constant.h 
@@ -26,6 +25,7 @@ we also need to change the file name in main.cpp
 ```
 char data_name[20]="audio";
 ```
+Then re-compile the program.
 
 ## Index and Search (SH/script)
 
