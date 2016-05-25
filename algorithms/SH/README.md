@@ -28,6 +28,6 @@ To build the index of SH and conduct the search, enter into folder and run
 run.sh
 ```
 
-to obtain the searching performance of SH. We use 20 values for the array MaxChecked in the main.cpp (e.g. the number of the visited points) to  achieve the trade-off between search speed and search quality (recall).
+to obtain the searching performance of SH. We use 20 values for the array MaxChecked in the main.cpp (e.g. the number of the visited points) to  achieve the trade-off between search speed and search quality (recall). The result are reported in SH/result directory.
 
 
