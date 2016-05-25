@@ -1,4 +1,4 @@
-# SH - Selective Hashing. 
+# SH - Selective Hashing 
 
 [Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). 
 
