@@ -1,5 +1,11 @@
-# SH - Selective Hashing. [Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). 
+# SH - Selective Hashing. 
 
+[Originial source code](http://www.comp.nus.edu.sg/~dsh/download.html). 
+
+## Prerequisites
+
+- A linux system 
+- [A sample dataset](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including its data points, query points and ground truth results. All data files downloaded should be put in the `./knn_benchmark/data` directory.
 
 ## Compile (SH/src)
 
