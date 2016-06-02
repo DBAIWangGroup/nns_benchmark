@@ -182,7 +182,7 @@ each as a 500-dimensional bag-of-words vector.
 
 - [**Trevi**](http://phototour.cs.washington.edu/patches/default.htm) consists of 0.4 million X 1024 bitmap(.bmp) images, each containing a `16 X 16` array of image patch. Each patch is sampled as `64 X 64` grayscale, with a canonical scale and orientation. Therefore, Trevi patch dataset consists of around 100,000 4096-d vectors.
 
-- [**UQ_V**]() is a video dataset. A local feature based on some keyframes are extracted which include 256 dimensions.
+- [**UQ_V**](http://staff.itee.uq.edu.au/shenht/UQ_VIDEO/) is a video dataset. A local feature based on some keyframes are extracted which include 256 dimensions.
 
 - [**Yout**](http://www.cs.tau.ac.il/~wolf/ytfaces/index.html) contains 3,425 videos of 1,595 different people. All the videos were downloaded from YouTube. An average of 2.15 videos are available for each subject. The shortest clip duration is 48 frames, the longest clip is 6,070 frames, and the average length of a video clip is 181.3 frames.
 
