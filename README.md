@@ -55,7 +55,7 @@ Note that both external memory and in-memory versions of **SRS** are available.
     * In our implementation, we use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 
-- **NSH** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
+- **NSG** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
 [Originial source code](https://github.com/pyongjoo/nsh)
     * Source codes (index construction and search) are implemented by MATLAB. 
     * In our implementation, we use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
@@ -182,13 +182,55 @@ each as a 500-dimensional bag-of-words vector.
 
 - [**Trevi**](http://phototour.cs.washington.edu/patches/default.htm) consists of 0.4 million X 1024 bitmap(.bmp) images, each containing a `16 X 16` array of image patch. Each patch is sampled as `64 X 64` grayscale, with a canonical scale and orientation. Therefore, Trevi patch dataset consists of around 100,000 4096-d vectors.
 
-- [**UQ_V**](http://staff.itee.uq.edu.au/shenht/UQ_VIDEO/) is a video dataset. A local feature based on some keyframes are extracted which include 256 dimensions.
-
+- [**UQ_V**](http://staff.itee.uq.edu.au/shenht/UQ_VIDEO/) is a video dataset. A
+  local feature based on some keyframes are extracted which include 256
+  dimensions.
+  
 - [**Yout**](http://www.cs.tau.ac.il/~wolf/ytfaces/index.html) contains 3,425 videos of 1,595 different people. All the videos were downloaded from YouTube. An average of 2.15 videos are available for each subject. The shortest clip duration is 48 frames, the longest clip is 6,070 frames, and the average length of a video clip is 181.3 frames.
 
 ## PERFORMANCE EVALUATION and ANALYSES 
 
 Please refer to our [NNS Experimental Evaluation paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1]. 
+
+## License
+
+Our own code is released under the [Apache License Version 2.0](http://www.apache.org/licenses/). Copyright is owned by DBWang Group (University of New South Wales, Australia), Wen Li, and Ying Zhang. 
+
+Below are the license information for the included implementations: 
+
+1. KGraph: BSD license. Users are still encouraged to download the binary distributions from [its home site](https://github.com/aaalgo/kgraph) so building issues can be avoided.
+
+2. NMSLib and Annoy: [Apache License Version 2.0](http://www.apache.org/licenses/).
+
+3. AGH: License information below
+
+```
+Terms of Use
+--
+Copyright (c) 2009-2011 by
+--
+DVMM Laboratory
+Department of Electrical Engineering
+Columbia University
+Rm 1312 S.W. Mudd, 500 West 120th Street
+New York, NY 10027
+USA
+--
+If it is your intention to use this code for non-commercial purposes, such as in academic research, this code is free.
+--
+If you use this code in your research, please acknowledge the authors, and cite our related publication:
+--
+
+Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," International Conference on Machine Learning (ICML), Bellevue, Washington, USA, 2011
+```
+
+4. SRS: GPL License.
+
+5. FLANN: BSD License. 
+
+6. RCT: The Authors grant us the permission to release source code by email.
+
+7. Algorithms whose license information are not mentioned: NSH,  OPQ, QALSH, SGH, and SH. 
 
  
 ## REFERENCES 
