@@ -55,7 +55,7 @@ Note that both external memory and in-memory versions of **SRS** are available.
     * In our implementation, we use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
 
 
-- **NSG** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
+- **NSH** Neighbor-Sensitive Hashing ([6], PVLDB’15). 
 [Originial source code](https://github.com/pyongjoo/nsh)
     * Source codes (index construction and search) are implemented by MATLAB. 
     * In our implementation, we use the hierarchical clustering trees in **FLANN** (C++) to index the resulting binary vectors to support more efficient search.
