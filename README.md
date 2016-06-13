@@ -194,7 +194,7 @@ Please refer to our [NNS Experimental Evaluation paper](http://www.cse.unsw.edu.
 
 ## License
 
-Our own code is released under the [Apache License Version 2.0](http://www.apache.org/licenses/). Copyright is owned by DBWang Group (University of New South Wales, Australia), Wen Li, and Ying Zhang. 
+Our own code is released under the [Apache License Version 2.0](http://www.apache.org/licenses/). Copyright is owned by DBWang Group (University of New South Wales, Australia) and Database group at QCIS, UTS (Centre for Quantum Computation & Intelligent Systems, The University of Technology Sydney, Australia). 
 
 Below are the license information for the included implementations: 
 
