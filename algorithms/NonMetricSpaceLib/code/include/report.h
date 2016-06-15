@@ -62,10 +62,10 @@ namespace similarity {
     Print << "------------------------------------" << std::endl;
 */
 	Print.setf(ios::fixed);
-	Print<<round6(ExpRes.GetRecallAvg())<< " " << round6(ExpRes.GetQueryTimeAvg()/config.GetQueryToRunQty()) <<" "<< round2(ExpRes.GetIndexTimeAvg())<<" "<< round2(ExpRes.GetMemAvg())<<" "<<MethParamStr<<" "<< endl;
+	Print<<round6(ExpRes.GetRecallAvg())<< " " << round6(ExpRes.GetQueryTimeAvg()/1000.0) <<" "<< round2(ExpRes.GetIndexTimeAvg())<<" "<< round2(ExpRes.GetMemAvg())<<" "<<MethParamStr<<" "<< endl;
 
     cout.setf(ios::fixed);
-	cout<<round6(ExpRes.GetRecallAvg())<< " "<< round6(ExpRes.GetQueryTimeAvg()/config.GetQueryToRunQty()) <<" "<< round2(ExpRes.GetIndexTimeAvg())<<" "<< round2(ExpRes.GetMemAvg())<<" "<<MethParamStr<<" "<< endl;
+	cout<<round6(ExpRes.GetRecallAvg())<< " "<< round6(ExpRes.GetQueryTimeAvg()/1000.0) <<" "<< round2(ExpRes.GetIndexTimeAvg())<<" "<< round2(ExpRes.GetMemAvg())<<" "<<MethParamStr<<" "<< endl;
 
 	//<<round6(ExpRes.GetMrrAvg())<<" "<<round6(ExpRes.GetNumCloserAvg())<<" "<<round6(ExpRes.GetMAPAvg())<<" "<<round6(ExpRes.GetDcgAvg())<<" "
 
