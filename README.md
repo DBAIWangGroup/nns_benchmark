@@ -90,8 +90,12 @@ Note that, in our impementation, we use the [inverted multi-indexing technique](
 ### 3. Neighborhood-Based Methods
 
 - **SW** Small World Graph ([13], IS'14). 
-[Originial source code](https://github.com/searchivarius/nmslib)
-    * We disable the SIMD, multi-threading, and `-Ofast` compiler option.
+[Originial source code](https://github.com/searchivarius/nmslib)  
+  * We disable the SIMD, multi-threading, and `-Ofast` compiler option.
+
+- **HNSW** Hierarchical Navigable Small World ([20], arXiv'16). 
+[Originial source code](https://github.com/searchivarius/nmslib)  
+  * We disable the SIMD, multi-threading, and `-Ofast` compiler option.
 
 - **RCT** Rank Cover Tree ([14], TPAMI'15).
   Originial source code is obtained from authors by email, who kindly allow us to release them through this benchmark. 
@@ -276,7 +280,7 @@ Anal. Mach. Intell., 36(11):2227–2240, 2014.
 
 [19] L. Amsaleg, O. Chelly, T. Furon, S. Girard, M. E. Houle, K. Kawarabayashi, and M. Nett. *Estimating local intrinsic dimensionality*. In SIGKDD, 2015.
 
-
+[20] Yu. A. Malkov and D. A. Yashunin   *Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs*, In arXiv, 2016	
 
 
 
