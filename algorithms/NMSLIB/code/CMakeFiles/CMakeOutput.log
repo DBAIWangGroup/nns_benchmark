@@ -1,0 +1,668 @@
+The system is: Linux - 2.6.32-573.12.1.el6.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/rh/devtoolset-2/root/usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/3.2.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/rh/devtoolset-2/root/usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/3.2.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec685482307/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec685482307.dir/build.make CMakeFiles/cmTryCompileExec685482307.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec685482307.dir/testCCompiler.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec685482307.dir/testCCompiler.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec685482307
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec685482307.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec685482307.dir/testCCompiler.c.o  -o cmTryCompileExec685482307 -rdynamic 
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec317719069/fast"
+gmake: Warning: File `Makefile' has modification time 0.0017 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec317719069.dir/build.make CMakeFiles/cmTryCompileExec317719069.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec317719069.dir/progress.make' has modification time 0.0065 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec317719069
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec317719069.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc      -v CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec317719069 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-2/root/usr/bin/cc
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/opt/rh/devtoolset-2/root/usr --mandir=/opt/rh/devtoolset-2/root/usr/share/man --infodir=/opt/rh/devtoolset-2/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.2 20140120 (Red Hat 4.8.2-15) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec317719069' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec317719069 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.. CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec317719069/fast"]
+  ignore line: [gmake: Warning: File `Makefile' has modification time 0.0017 s in the future]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec317719069.dir/build.make CMakeFiles/cmTryCompileExec317719069.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp']
+  ignore line: [gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec317719069.dir/progress.make' has modification time 0.0065 s in the future]
+  ignore line: [/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec317719069]
+  ignore line: [/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec317719069.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-2/root/usr/bin/cc      -v CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec317719069 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-2/root/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/opt/rh/devtoolset-2/root/usr --mandir=/opt/rh/devtoolset-2/root/usr/share/man --infodir=/opt/rh/devtoolset-2/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.2 20140120 (Red Hat 4.8.2-15) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec317719069' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec317719069 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.. CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec317719069] ==> ignore
+    arg [/usr/lib/../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2]
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..]
+    arg [CMakeFiles/cmTryCompileExec317719069.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o] ==> ignore
+    arg [/usr/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2] ==> [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64] ==> [/opt/rh/devtoolset-2/root/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..] ==> [/opt/rh/devtoolset-2/root/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2;/opt/rh/devtoolset-2/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-2/root/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2258770254/fast"
+gmake: Warning: File `Makefile' has modification time 0.0038 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2258770254.dir/build.make CMakeFiles/cmTryCompileExec2258770254.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec2258770254.dir/progress.make' has modification time 0.0068 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2258770254.dir/feature_tests.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -std=c11 -o CMakeFiles/cmTryCompileExec2258770254.dir/feature_tests.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec2258770254
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2258770254.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec2258770254.dir/feature_tests.c.o  -o cmTryCompileExec2258770254 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3521544553/fast"
+gmake: Warning: File `Makefile' has modification time 0.0034 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3521544553.dir/build.make CMakeFiles/cmTryCompileExec3521544553.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec3521544553.dir/progress.make' has modification time 0.0079 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3521544553.dir/feature_tests.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec3521544553.dir/feature_tests.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec3521544553
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3521544553.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec3521544553.dir/feature_tests.c.o  -o cmTryCompileExec3521544553 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3695376473/fast"
+gmake: Warning: File `Makefile' has modification time 0.003 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3695376473.dir/build.make CMakeFiles/cmTryCompileExec3695376473.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec3695376473.dir/progress.make' has modification time 0.0074 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3695376473.dir/feature_tests.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -std=c90 -o CMakeFiles/cmTryCompileExec3695376473.dir/feature_tests.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec3695376473
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3695376473.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec3695376473.dir/feature_tests.c.o  -o cmTryCompileExec3695376473 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3770998589/fast"
+gmake: Warning: File `Makefile' has modification time 0.0044 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3770998589.dir/build.make CMakeFiles/cmTryCompileExec3770998589.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec3770998589.dir/progress.make' has modification time 0.0075 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3770998589.dir/testCXXCompiler.cxx.o
+/opt/rh/devtoolset-2/root/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3770998589.dir/testCXXCompiler.cxx.o -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3770998589
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3770998589.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/c++        CMakeFiles/cmTryCompileExec3770998589.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3770998589 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2289776478/fast"
+gmake: Warning: File `Makefile' has modification time 0.0035 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2289776478.dir/build.make CMakeFiles/cmTryCompileExec2289776478.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec2289776478.dir/progress.make' has modification time 0.0061 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o
+/opt/rh/devtoolset-2/root/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2289776478
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2289776478.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/c++       -v CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2289776478 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-2/root/usr/bin/c++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/opt/rh/devtoolset-2/root/usr --mandir=/opt/rh/devtoolset-2/root/usr/share/man --infodir=/opt/rh/devtoolset-2/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.2 20140120 (Red Hat 4.8.2-15) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2289776478' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2289776478 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.. CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2289776478/fast"]
+  ignore line: [gmake: Warning: File `Makefile' has modification time 0.0035 s in the future]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2289776478.dir/build.make CMakeFiles/cmTryCompileExec2289776478.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp']
+  ignore line: [gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec2289776478.dir/progress.make' has modification time 0.0061 s in the future]
+  ignore line: [/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/rh/devtoolset-2/root/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2289776478]
+  ignore line: [/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2289776478.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-2/root/usr/bin/c++       -v CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2289776478 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-2/root/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/opt/rh/devtoolset-2/root/usr --mandir=/opt/rh/devtoolset-2/root/usr/share/man --infodir=/opt/rh/devtoolset-2/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.8.2-20140120/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.2 20140120 (Red Hat 4.8.2-15) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2289776478' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2289776478 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../.. CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2289776478] ==> ignore
+    arg [/usr/lib/../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2]
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..] ==> dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..]
+    arg [CMakeFiles/cmTryCompileExec2289776478.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/crtend.o] ==> ignore
+    arg [/usr/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2] ==> [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../lib64] ==> [/opt/rh/devtoolset-2/root/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../..] ==> [/opt/rh/devtoolset-2/root/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2;/opt/rh/devtoolset-2/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-2/root/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1y] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1519958920/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1519958920.dir/build.make CMakeFiles/cmTryCompileExec1519958920.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec1519958920.dir/progress.make' has modification time 0.0035 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1519958920.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-2/root/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTryCompileExec1519958920.dir/feature_tests.cxx.o -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec1519958920
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1519958920.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/c++        CMakeFiles/cmTryCompileExec1519958920.dir/feature_tests.cxx.o  -o cmTryCompileExec1519958920 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3107561267/fast"
+gmake: Warning: File `Makefile' has modification time 0.0039 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3107561267.dir/build.make CMakeFiles/cmTryCompileExec3107561267.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec3107561267.dir/progress.make' has modification time 0.0064 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3107561267.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-2/root/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTryCompileExec3107561267.dir/feature_tests.cxx.o -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec3107561267
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3107561267.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/c++        CMakeFiles/cmTryCompileExec3107561267.dir/feature_tests.cxx.o  -o cmTryCompileExec3107561267 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1247648529/fast"
+gmake: Warning: File `Makefile' has modification time 0.0016 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1247648529.dir/build.make CMakeFiles/cmTryCompileExec1247648529.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec1247648529.dir/progress.make' has modification time 0.0057 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1247648529.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-2/root/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec1247648529.dir/feature_tests.cxx.o -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec1247648529
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1247648529.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/c++        CMakeFiles/cmTryCompileExec1247648529.dir/feature_tests.cxx.o  -o cmTryCompileExec1247648529 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2326696968/fast"
+gmake: Warning: File `Makefile' has modification time 0.011 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2326696968.dir/build.make CMakeFiles/cmTryCompileExec2326696968.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec2326696968.dir/flags.make' has modification time 0.0062 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2326696968.dir/CheckIncludeFiles.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2326696968.dir/CheckIncludeFiles.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2326696968
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2326696968.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec2326696968.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2326696968 -rdynamic 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1176357958/fast"
+gmake: Warning: File `Makefile' has modification time 0.0093 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1176357958.dir/build.make CMakeFiles/cmTryCompileExec1176357958.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec1176357958.dir/flags.make' has modification time 0.0059 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1176357958.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1176357958.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1176357958
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1176357958.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1176357958.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1176357958 -rdynamic -lpthread 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3784435972/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3784435972.dir/build.make CMakeFiles/cmTryCompileExec3784435972.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3784435972.dir/CheckIncludeFiles.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3784435972.dir/CheckIncludeFiles.c.o   -c /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3784435972
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3784435972.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec3784435972.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3784435972 -rdynamic 
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1739529121/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1739529121.dir/build.make CMakeFiles/cmTryCompileExec1739529121.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1739529121.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1739529121.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1739529121
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1739529121.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1739529121.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1739529121 -rdynamic -lpthread 
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2023778701/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2023778701.dir/build.make CMakeFiles/cmTryCompileExec2023778701.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2023778701.dir/CheckIncludeFiles.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2023778701.dir/CheckIncludeFiles.c.o   -c /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2023778701
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2023778701.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec2023778701.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2023778701 -rdynamic 
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec625074925/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec625074925.dir/build.make CMakeFiles/cmTryCompileExec625074925.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec625074925.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec625074925.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec625074925
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec625074925.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec625074925.dir/CheckFunctionExists.c.o  -o cmTryCompileExec625074925 -rdynamic -lpthread 
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+
+

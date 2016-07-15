@@ -1,0 +1,163 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec63957620/fast"
+gmake: Warning: File `Makefile' has modification time 0.0074 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec63957620.dir/build.make CMakeFiles/cmTryCompileExec63957620.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec63957620.dir/flags.make' has modification time 0.0035 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec63957620.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec63957620.dir/CheckSymbolExists.c.o   -c /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec63957620
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec63957620.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec63957620.dir/CheckSymbolExists.c.o  -o cmTryCompileExec63957620 -rdynamic 
+CMakeFiles/cmTryCompileExec63957620.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec63957620] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec63957620/fast] Error 2
+
+File /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3176298737/fast"
+gmake: Warning: File `Makefile' has modification time 0.01 s in the future
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3176298737.dir/build.make CMakeFiles/cmTryCompileExec3176298737.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTryCompileExec3176298737.dir/flags.make' has modification time 0.0053 s in the future
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3176298737.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3176298737.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3176298737
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3176298737.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3176298737.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3176298737 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3176298737] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/home/liwen/Documents/NMSLIB/nmslib-1.5.1/similarity_search/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3176298737/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1167864682/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1167864682.dir/build.make CMakeFiles/cmTryCompileExec1167864682.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1167864682.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1167864682.dir/CheckSymbolExists.c.o   -c /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1167864682
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1167864682.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec1167864682.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1167864682 -rdynamic 
+CMakeFiles/cmTryCompileExec1167864682.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec1167864682] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1167864682/fast] Error 2
+
+File /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1614964294/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1614964294.dir/build.make CMakeFiles/cmTryCompileExec1614964294.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1614964294.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1614964294.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1614964294
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1614964294.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1614964294.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1614964294 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec1614964294] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1614964294/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1791637194/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1791637194.dir/build.make CMakeFiles/cmTryCompileExec1791637194.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1791637194.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1791637194.dir/CheckSymbolExists.c.o   -c /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1791637194
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1791637194.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc       CMakeFiles/cmTryCompileExec1791637194.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1791637194 -rdynamic 
+CMakeFiles/cmTryCompileExec1791637194.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec1791637194] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1791637194/fast] Error 2
+
+File /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3258096989/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3258096989.dir/build.make CMakeFiles/cmTryCompileExec3258096989.dir/build
+gmake[1]: Entering directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_progress_report /home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3258096989.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3258096989.dir/CheckFunctionExists.c.o   -c /home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3258096989
+/home/yzhang4/HD/home/liwen/Downloads/software/CMake3.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3258096989.dir/link.txt --verbose=1
+/opt/rh/devtoolset-2/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3258096989.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3258096989 -rdynamic -lpthreads 
+/opt/rh/devtoolset-2/root/usr/libexec/gcc/x86_64-redhat-linux/4.8.2/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3258096989] Error 1
+gmake[1]: Leaving directory `/home/yzhang4/HD/release/algorithms/NMSLIB/code/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3258096989/fast] Error 2
+
+
