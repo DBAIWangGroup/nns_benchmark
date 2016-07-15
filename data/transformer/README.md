@@ -9,10 +9,10 @@ Due to .hdf5 is a file format for storing and managing the data collections of a
 
 ## Compile 
 
-go to Converter/src and run
+go to src and run
 
 ```
-make
+sh ./build.sh
 ```
 
 to get the executable file.
