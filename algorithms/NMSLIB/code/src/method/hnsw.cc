@@ -327,10 +327,11 @@ namespace similarity {
 
                     const vector<HnswNode*>& neighbor = curNode->getAllFriends(level);
                     int size = neighbor.size();
+                    /*
                     for (int i = 0; i < size; i++) {
                         HnswNode *node = neighbor[i];
                         _mm_prefetch((char *)(node)->getData(), _MM_HINT_T0);
-                    }
+                    }*/
                     for (int i = 0; i < size; i++)
                     {
                         currObj = (neighbor[i])->getData();
@@ -442,11 +443,12 @@ namespace similarity {
 
             // Can't access curEv anymore! The reference would become invalid
             candidateSet.pop();
-
+	    
             // calculate distance to each neighbor
+            /*
             for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
                 _mm_prefetch((char *)(*iter)->getData(), _MM_HINT_T0);
-            }
+            }*/
 
             for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
 #if USE_BITSET_FOR_INDEXING
@@ -638,9 +640,10 @@ namespace similarity {
     				changed = false;
     
     				const vector<HnswNode*>& neighbor = curNode->getAllFriends(i);
+    				/*
     				for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     					_mm_prefetch((char *)(*iter)->getData(), _MM_HINT_T0);
-    				}
+    				}*/
     				for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     					currObj = (*iter)->getData();
     					d = query->DistanceObjLeft(currObj);
@@ -687,11 +690,11 @@ namespace similarity {
     			const vector<HnswNode*>& neighbor = (initNode)->getAllFriends(0);
     
     			size_t curId;
-    
+    			/*
     			for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     				_mm_prefetch((char *)(*iter)->getData(), _MM_HINT_T0);
     				_mm_prefetch((char *)(massVisited + (*iter)->getId()), _MM_HINT_T0);
-    			}
+    			}*/
     			//calculate distance to each neighbor
     			for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     
@@ -768,11 +771,11 @@ namespace similarity {
     				const vector<HnswNode*>& neighbor = (initNode)->getAllFriends(i);
     
     				size_t curId;
-    
+    				/*
     				for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     					_mm_prefetch((char *)(*iter)->getData(), _MM_HINT_T0);
     					_mm_prefetch((char *)(massVisited + (*iter)->getId()), _MM_HINT_T0);
-    				}
+    				}*/
     				//calculate distance to each neighbor
     				for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {    
     					curId = (*iter)->getId();
@@ -841,11 +844,11 @@ namespace similarity {
     			const vector<HnswNode*>& neighbor = (initNode)->getAllFriends(0);
     
     			size_t curId;
-    
+    			/*
     			for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     				_mm_prefetch((char *)(*iter)->getData(), _MM_HINT_T0);
     				_mm_prefetch((char *)(massVisited + (*iter)->getId()), _MM_HINT_T0);
-    			}
+    			}*/
     			//calculate distance to each neighbor
     			for (auto iter = neighbor.begin(); iter != neighbor.end(); ++iter) {
     
