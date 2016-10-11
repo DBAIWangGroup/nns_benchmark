@@ -107,7 +107,7 @@ Note that, in our impementation, we use the [inverted multi-indexing technique](
 
 - **DPG** Diversified Proximity Graph ([1]). 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark/algorithms/DPG)
-    We engineered a new algorithm, DPG, that constructs an alternative neighborhood graph index, yet uses the same search algorithm as the KGraph. DPG is more robust than KGraph across different datasets. For more details about the algorithm and its analysis, please refer to our [NNS Experimental Evaluation Paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1]. 
+    We engineered a new algorithm, DPG, that constructs an alternative neighborhood graph index, yet uses the same search algorithm as the KGraph. DPG is more robust than KGraph across different datasets. For more details about the algorithm and its analysis, please refer to our [NNS Experimental Evaluation Paper](https://arxiv.org/abs/1610.02455)[1]. 
 
 
 ## Datasets Used 
