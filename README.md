@@ -194,7 +194,7 @@ each as a 500-dimensional bag-of-words vector.
 
 ## PERFORMANCE EVALUATION and ANALYSES 
 
-Please refer to our [NNS Experimental Evaluation paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1]. 
+Please refer to our [NNS Experimental Evaluation paper](https://arxiv.org/abs/1610.02455)[1]. 
 
 ## License
 
