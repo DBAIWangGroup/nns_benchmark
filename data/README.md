@@ -6,7 +6,7 @@ Please **download** the following compressed dataset as the running sample data 
 
 - [Audio](https://www.dropbox.com/s/1hhaz08i3qk4ett/audio.zip?dl=0). Audio contains about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.
 
-More datasets evaluated in our [NNS Experimental Evaluation paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf) will be uploaded soon. 
+More datasets evaluated in our [NNS Experimental Evaluation paper](https://arxiv.org/abs/1610.02455) will be uploaded soon. 
 
 ## Deduplication and Query Set Generation
 
