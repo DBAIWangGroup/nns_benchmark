@@ -23,7 +23,7 @@ We limit the scope of this benchmark by imposing the following constraints.
 
 - **Exact kNN as the ground truth**. In some existing works, each data point has a label (typically in classification or clustering applications) and the labels are regarded as the ground truth when evaluating the recall of approximate NN algorithms. In our benchmark, we use the exact kNN points as the ground truth as this works for all datasets and majority of the applications.
 
-Currently, we evaluate **15 representative NNS algorithms** on **20 datasets** where details are reported in our [Nearest Neighbor Search (NNS) Experimental Evaluation Paper](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)[1].
+Currently, we evaluate **15 representative NNS algorithms** on **20 datasets** where details are reported in our [Nearest Neighbor Search (NNS) Experimental Evaluation Paper](https://arxiv.org/abs/1610.02455)[1].
 
 ## Algorithms Evaluted 
 
@@ -239,7 +239,7 @@ Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," Inter
  
 ## REFERENCES 
 
-[1] W. Li, Y. Zhang, Y. Sun, W. Wang, W. Zhang, X. Lin, *Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement*. [Full Version](http://www.cse.unsw.edu.au/~yingz/NNS.pdf)
+[1] W. Li, Y. Zhang, Y. Sun, W. Wang, W. Zhang, X. Lin, *Nearest Neighbor Search on High Dimensional Data — Experiments, Analyses, and Improvement (v1.0)*. CoRR, vol. abs/1610.02455, 2016. [Online version](https://arxiv.org/abs/1610.02455)
 
 [2] Q. Huang, J. Feng, Y. Zhang, Q. Fang, and W. Ng. *Query-aware locality-sensitive hashing for approximate nearest neighbor search*. PVLDB, 9(1):1–12, 2015.
 
