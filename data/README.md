@@ -18,7 +18,7 @@ Please **download** the following compressed dataset as the running sample data 
 - [Sift](https://pan.baidu.com/s/1dF87qrJ). Sift consists of 1 million 128-d SIFT vectors.
 - [Sun397](https://pan.baidu.com/s/1eSBndrs). Sun397 contains about 0.08 million 512-d GIST features of images.
 - [Trevi](https://pan.baidu.com/s/1gfcFgTP). Trevi consists of 0.4 million × 1024 bitmap(.bmp) images, each containing a 16 × 16 array of image patches. Each patch is sampled as 64 × 64 grayscale, with a canonical scale and orientation. Therefore, Trevi patch dataset consists of around 100,000 4096-d vectors.
-- [UKbench](https://pan.baidu.com/s/1bpchpEZ). UKbench contains about 1 million 128-d features of images.
+- [UKbench](https://pan.baidu.com/s/1pKMPM23). UKbench contains about 1 million 128-d features of images.
 
 More datasets evaluated in our [NNS Experimental Evaluation paper](https://arxiv.org/abs/1610.02455) will be uploaded soon. 
 
