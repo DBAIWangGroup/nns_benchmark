@@ -6,6 +6,7 @@ Please **download** the following compressed dataset as the running sample data 
 
 - [Audio](https://www.dropbox.com/s/1hhaz08i3qk4ett/audio.zip?dl=0). Audio contains about 0.05 million 192-d audio feature vectors extracted by Marsyas library from DARPA TIMIT audio speed dataset.
 - [Cifar](https://pan.baidu.com/s/1eR2juO6). Cifar is a labeled subset of TinyImage dataset, which consists of 60000 32 × color images in 10 classes, with each image represented by a 512-d GIST feature vector.
+- [Deep](https://pan.baidu.com/s/1eR2juO6). Deep dataset contains deep neural codes of natural images obtained from the activations of a convolutional neural network, which contains about 1 million data points with 256 dimensions.
 
 More datasets evaluated in our [NNS Experimental Evaluation paper](https://arxiv.org/abs/1610.02455) will be uploaded soon. 
 
