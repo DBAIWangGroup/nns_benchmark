@@ -108,6 +108,10 @@ Note that, in our impementation, we use the [inverted multi-indexing technique](
 - **DPG** Diversified Proximity Graph ([1]). 
 [Originial source code](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/algorithms/DPG)
     We engineered a new algorithm, DPG, that constructs an alternative neighborhood graph index, yet uses the same search algorithm as the KGraph. DPG is more robust than KGraph across different datasets. For more details about the algorithm and its analysis, please refer to our [NNS Experimental Evaluation Paper](https://arxiv.org/abs/1610.02455)[1]. 
+    
+- **NSG**  Navigating Spreading-out Graph ([21], VLDB 2019). 
+[Originial source code](https://github.com/ZJULearning/nsg)
+    NSG is a newly graph-based algorithm. We disable SIMD instructions and hardware prefetching technique. 
 
 
 ## Datasets Used 
@@ -236,6 +240,11 @@ Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," Inter
 
 7. Algorithms whose license information are not mentioned: NSH,  OPQ, QALSH, SGH, and SH. 
 
+## Recall vs Speedup
+Here, we present the Recall with respect to Speedup of all the algorithms on four datasets.
+
+
+
  
 ## REFERENCES 
 
@@ -281,6 +290,8 @@ Anal. Mach. Intell., 36(11):2227–2240, 2014.
 [19] L. Amsaleg, O. Chelly, T. Furon, S. Girard, M. E. Houle, K. Kawarabayashi, and M. Nett. *Estimating local intrinsic dimensionality*. In SIGKDD, 2015.
 
 [20] Yu. A. Malkov and D. A. Yashunin   *Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs*, In arXiv, 2016	
+
+[21] C. Fu, C. Wang, and D. Cai.  *Fast approximate nearest neighbor search with navigating spreading-out graphs*. In VLDB, pages 461- 474, 2019.
 
 
 
