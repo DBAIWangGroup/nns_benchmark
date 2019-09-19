@@ -244,13 +244,13 @@ Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," Inter
 Here, we present the Recall with respect to Speedup of all the algorithms on four datasets, the k is set to be 20.
 
 ![image](https://github.com/MingjieL/ANN/blob/master/sift_Recall_speedup.jpg "Sift")
-  Sift
+  **Sift**
 ![image](https://github.com/MingjieL/ANN/blob/master/gist_Recall_speedup.jpg "Gist")
-  Sift
+  **Gist**
 ![image](https://github.com/MingjieL/ANN/blob/master/glove_Recall_speedup.jpg "Glove")
-  Sift
+  **Glove**
 ![image](https://github.com/MingjieL/ANN/blob/master/millionSong_Recall_speedup.jpg "MillionSong")
-  Sift
+  **MillionSong**
 
 
  
