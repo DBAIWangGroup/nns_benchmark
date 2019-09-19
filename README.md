@@ -243,10 +243,10 @@ Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," Inter
 ## Recall vs Speedup
 Here, we present the Recall with respect to Speedup of all the algorithms on four datasets.
 
-![image](http://github.com/MingjieL/ANN/master/images/sift_Recall_speedup.jpg)
-![image](http://github.com/MingjieL/ANN/master/images/gist_Recall_speedup.jpg)
-![image](http://github.com/MingjieL/ANN/master/images/glove_Recall_speedup.jpg)
-![image](http://github.com/MingjieL/ANN/master/images/millionSong_Recall_speedup.jpg)
+![image](http://github.com/MingjieL/ANN/master/sift_Recall_speedup.jpg)
+![image](http://github.com/MingjieL/ANN/master/gist_Recall_speedup.jpg)
+![image](http://github.com/MingjieL/ANN/master/glove_Recall_speedup.jpg)
+![image](http://github.com/MingjieL/ANN/master/millionSong_Recall_speedup.jpg)
 
  
 ## REFERENCES 
