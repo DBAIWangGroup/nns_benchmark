@@ -241,16 +241,17 @@ Wei Liu, Jun Wang, Sanjiv Kumar, and Shih-Fu Chang, "Hashing with Graphs," Inter
 7. Algorithms whose license information are not mentioned: NSH,  OPQ, QALSH, SGH, and SH. 
 
 ## Recall vs Speedup
-Here, we present the Recall with respect to Speedup of all the algorithms on four datasets.
+Here, we present the Recall with respect to Speedup of all the algorithms on four datasets, the k is set to be 20.
 
+- [**Sift**]
 ![image](https://github.com/MingjieL/ANN/blob/master/sift_Recall_speedup.jpg "Sift")
-- [**Enron**]
+- [**Sift**]
 ![image](https://github.com/MingjieL/ANN/blob/master/gist_Recall_speedup.jpg "Gist")
-Gist
+- [**Sift**]
 ![image](https://github.com/MingjieL/ANN/blob/master/glove_Recall_speedup.jpg "Glove")
-Glove
+- [**Sift**]
 ![image](https://github.com/MingjieL/ANN/blob/master/millionSong_Recall_speedup.jpg "MillionSong")
-MillionSong
+
 
  
 ## REFERENCES 
